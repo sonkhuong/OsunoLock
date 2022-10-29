@@ -30,6 +30,12 @@ class MainFragment : Fragment() {
     private fun viewLayout() {
         with(binding) {
             buttonCheck.setOnClickListener {
+                buttonDoorLock.startAnimation(
+                    AnimationUtils.loadAnimation(
+                        context,
+                        R.anim.anim_swipe_end
+                    )
+                )
                 buttonUnKnowLock.startAnimation(
                     AnimationUtils.loadAnimation(
                         context,
