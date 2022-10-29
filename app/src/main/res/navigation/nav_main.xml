@@ -2,10 +2,25 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/nav_main"
-    app:startDestination="@id/mainFragment">
-
+    app:startDestination="@id/managerScanLockFragment">
     <fragment
-        android:id="@+id/mainFragment"
-        android:name="com.dagoras.osunolock.main.MainFragment"
-        android:label="MainFragment" />
+        android:id="@+id/managerScanLockFragment"
+        android:name="com.dagoras.osunolock.scanlock.fragment.ManagerScanLockFragment"
+        android:label="ManagerScanLockFragment" >
+        <action
+            android:id="@+id/action_managerScanLockFragment_to_fragmentScanLockWithBLT2"
+            app:destination="@id/fragmentScanLockWithBLT2" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentScanLockWithBLT2"
+        android:name="com.dagoras.osunolock.scanlock.fragment.FragmentScanLockWithBLT"
+        android:label="FragmentScanLockWithBLT" >
+        <action
+            android:id="@+id/action_fragmentScanLockWithBLT2_to_managerLockFragment"
+            app:destination="@id/managerLockFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/managerLockFragment"
+        android:name="com.dagoras.osunolock.managerlock.fragment.ManagerLockFragment"
+        android:label="ManagerLockFragment" />
 </navigation>

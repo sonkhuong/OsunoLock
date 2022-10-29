@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Man nay chi lam nhe, quet bluetooth giong
+    cai app dang lam ay -> Quet thanh cong ra thiet bi, bam vao
+    icon add_circle -> chuyen qua man manager lock -->
+</androidx.constraintlayout.widget.ConstraintLayout>

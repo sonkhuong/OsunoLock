@@ -4,6 +4,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <!-- Thieu header view -->
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLock"
         android:layout_width="match_parent"
@@ -101,14 +103,4 @@
             app:layout_constraintEnd_toStartOf="@id/buttonSmartLock"
             app:layout_constraintStart_toStartOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <Button
-        android:id="@+id/buttonCheck"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:background="@drawable/bg_white_shape_with_stroke"
-        android:text="CHECK"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/constraintLock" />
 </androidx.constraintlayout.widget.ConstraintLayout>
