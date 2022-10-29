@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLock"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/buttonUnKnowLock"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:drawableStart="@drawable/ic_baseline_lock_open_24"
+            android:drawablePadding="15dp"
+            android:gravity="center|start"
+            android:paddingStart="20dp"
+            android:text="UnKnow Lock"
+            app:layout_constraintBottom_toTopOf="@id/buttonViceLock"
+            app:layout_constraintEnd_toStartOf="@id/buttonSmartLock"
+            app:layout_constraintStart_toEndOf="@id/buttonHomeLock"
+            app:layout_constraintTop_toBottomOf="@id/buttonCarLock" />
+
+        <TextView
+            android:id="@+id/buttonDoorLock"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:drawableStart="@drawable/ic_baseline_lock_open_24"
+            android:drawablePadding="15dp"
+            android:gravity="center|start"
+            android:paddingStart="20dp"
+            android:text="Door Lock"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/buttonHomeLock"
+            android:layout_width="100dp"
+            android:layout_height="0dp"
+            android:drawableStart="@drawable/ic_baseline_lock_open_24"
+            android:drawablePadding="15dp"
+            android:gravity="center|start"
+            android:paddingStart="20dp"
+            android:text="Home Lock"
+            app:layout_constraintBottom_toTopOf="@id/buttonViceLock"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/buttonDoorLock" />
+
+        <TextView
+            android:id="@+id/buttonCarLock"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:drawableStart="@drawable/ic_baseline_lock_open_24"
+            android:drawablePadding="15dp"
+            android:gravity="center|start"
+            android:paddingStart="20dp"
+            android:text="Car Lock"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/buttonHomeLock"
+            app:layout_constraintTop_toBottomOf="@id/buttonDoorLock" />
+
+        <TextView
+            android:id="@+id/buttonSmartLock"
+            android:layout_width="100dp"
+            android:layout_height="0dp"
+            android:drawableStart="@drawable/ic_baseline_lock_open_24"
+            android:drawablePadding="15dp"
+            android:gravity="center|start"
+            android:paddingStart="20dp"
+            android:text="Smart Lock"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/buttonCarLock" />
+
+        <TextView
+            android:id="@+id/buttonViceLock"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:drawableStart="@drawable/ic_baseline_lock_open_24"
+            android:drawablePadding="15dp"
+            android:gravity="center|start"
+            android:paddingStart="20dp"
+            android:text="Vice Lock"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/buttonSmartLock"
+            app:layout_constraintStart_toStartOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <Button
+        android:id="@+id/buttonCheck"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CHECK"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/constraintLock" />
+</androidx.constraintlayout.widget.ConstraintLayout>
