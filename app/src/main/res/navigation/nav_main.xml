@@ -10,9 +10,6 @@
         <action
             android:id="@+id/action_managerScanLockFragment_to_fragmentScanLockWithBLT2"
             app:destination="@id/scanLockWithBLT2Fragment" />
-        <action
-            android:id="@+id/action_managerScanLockFragment_to_viewControlLockFragment"
-            app:destination="@id/viewControlLockFragment" />
     </fragment>
     <fragment
         android:id="@+id/scanLockWithBLT2Fragment"
@@ -26,8 +23,4 @@
         android:id="@+id/managerLockFragment"
         android:name="com.dagoras.osunolock.managerlock.fragment.ManagerLockFragment"
         android:label="ManagerLockFragment" />
-    <fragment
-        android:id="@+id/viewControlLockFragment"
-        android:name="com.dagoras.osunolock.submanagerlock.fragment.ViewControlLockFragment"
-        android:label="ViewControlLockFragment" />
 </navigation>
