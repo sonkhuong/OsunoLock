@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.dagoras.osunolock.databinding.FragmentScanLockWithBltBinding
 
-class FragmentScanLockWithBLT : Fragment() {
+class ScanLockWithBLTFragment : Fragment() {
 
     private lateinit var binding: FragmentScanLockWithBltBinding
 
