@@ -36,12 +36,6 @@ class ManagerScanLockFragment : Fragment() {
                     ManagerScanLockFragmentDirections.actionManagerScanLockFragmentToFragmentScanLockWithBLT2()
                 findNavController().navigate(action)
             }
-
-            buttonCarLock.setOnClickListener {
-                val action =
-                    ManagerScanLockFragmentDirections.actionManagerScanLockFragmentToViewControlLockFragment()
-                findNavController().navigate(action)
-            }
         }
     }
 
