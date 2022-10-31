@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">OsunoLock</string>
+
+    <!-- Remote Unlock -->
+    <string name="remote_unlock_str">This Feature allows you to Unlock the Smart Lock Remotely via a Gateway. This Feature can ONLY be Turned ON or OFF via Bluetooth.</string>
+
+    <!-- -->
 </resources>

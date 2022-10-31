@@ -22,5 +22,21 @@
     <fragment
         android:id="@+id/managerLockFragment"
         android:name="com.dagoras.osunolock.managerlock.fragment.ManagerLockFragment"
-        android:label="ManagerLockFragment" />
+        android:label="ManagerLockFragment" >
+        <action
+            android:id="@+id/action_managerLockFragment_to_settingsFragment"
+            app:destination="@id/settingsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.dagoras.osunolock.submanagerlock.settings.fragment.SettingsFragment"
+        android:label="SettingsFragment" >
+        <action
+            android:id="@+id/action_settingsFragment_to_remoteUnlockFragment"
+            app:destination="@id/remoteUnlockFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/remoteUnlockFragment"
+        android:name="com.dagoras.osunolock.submanagerlock.settings.fragment.remote_unlock.RemoteUnlockFragment"
+        android:label="RemoteUnlockFragment" />
 </navigation>

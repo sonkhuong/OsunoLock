@@ -1,4 +1,4 @@
-package com.dagoras.osunolock.managerlock.fragment
+package com.dagoras.osunolock.submanagerlock.settings.fragment
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -6,18 +6,18 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
-import com.dagoras.osunolock.databinding.FragmentManagerLockBinding
+import com.dagoras.osunolock.databinding.FragmentSettingsBinding
 
-class ManagerLockFragment : Fragment() {
+class SettingsFragment : Fragment() {
 
-    private lateinit var binding: FragmentManagerLockBinding
+    private lateinit var binding: FragmentSettingsBinding
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        binding = FragmentManagerLockBinding.inflate(inflater, container, false)
+        binding = FragmentSettingsBinding.inflate(inflater, container, false)
         return binding.root
     }
 
@@ -28,16 +28,14 @@ class ManagerLockFragment : Fragment() {
 
     private fun setupBinding() {
         with(binding) {
-            buttonSettings.setOnClickListener {
-                navigateToSettings()
+            lineRemote.setOnClickListener {
+                navigateToRemoteUnlock()
             }
-            buttonRemote
         }
     }
 
-    private fun navigateToSettings() {
-        val action =
-            ManagerLockFragmentDirections.actionManagerLockFragmentToSettingsFragment()
+    private fun navigateToRemoteUnlock() {
+        val action = SettingsFragmentDirections.actionSettingsFragmentToRemoteUnlockFragment()
         findNavController().navigate(action)
     }
 }
