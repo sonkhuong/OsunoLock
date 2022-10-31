@@ -11,4 +11,5 @@
     <color name="green">#37FF00</color>
     <color name="blue">#0040FF</color>
     <color name="blue_overlay">#CC3769FF</color>
+    <color name="red">#CCFF0000</color>
 </resources>
