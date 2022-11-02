@@ -6,4 +6,16 @@
 
     <!-- Auto Lock -->
     <string name="auto_lock_str">The lock will lock automatically after the time is up. Please unlock it for one time first to make the setting available.</string>
+
+    <!-- Tamper Alert -->
+    <string name="tamper_alert_str">By turning on, you enable the TAMPER alert.</string>
+
+    <!-- Reset Button -->
+    <string name="reset_button_str">By turning on, you can pair the lock again by long pressing the RESET button.\nBy turning off, the RESET button is disabled.</string>
+
+    <!-- Diagnosis -->
+    <string name="diagnosis_str">Diagnostics will Upload the Config Data to our Servers for Root Cause Analysis of the problem. Please execute within 2 meters of the Lock.</string>
+
+    <!-- Upload Data -->
+    <string name="upload_data_str">Upload data from lock to server. It may take several minutes.</string>
 </resources>
