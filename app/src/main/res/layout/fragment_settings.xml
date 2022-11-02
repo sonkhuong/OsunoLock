@@ -29,7 +29,7 @@
                     android:paddingVertical="10dp"
                     android:paddingStart="15dp"
                     android:paddingEnd="5dp"
-                    android:text="Basics"
+                    android:text="Lock Information"
                     android:textColor="@color/black" />
             </LinearLayout>
 

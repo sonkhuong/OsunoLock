@@ -29,14 +29,28 @@
     </fragment>
     <fragment
         android:id="@+id/settingsFragment"
-        android:name="com.dagoras.osunolock.submanagerlock.settings.fragment.SettingsFragment"
+        android:name="com.dagoras.osunolock.submanagerlock.fragment.settings.SettingsFragment"
         android:label="SettingsFragment" >
         <action
             android:id="@+id/action_settingsFragment_to_remoteUnlockFragment"
             app:destination="@id/remoteUnlockFragment" />
+        <action
+            android:id="@+id/action_settingsFragment_to_lockInformationFragment"
+            app:destination="@id/lockInformationFragment" />
+        <action
+            android:id="@+id/action_settingsFragment_to_autoLockFragment"
+            app:destination="@id/autoLockFragment" />
     </fragment>
     <fragment
         android:id="@+id/remoteUnlockFragment"
-        android:name="com.dagoras.osunolock.submanagerlock.settings.fragment.remote_unlock.RemoteUnlockFragment"
+        android:name="com.dagoras.osunolock.submanagerlock.fragment.settings.remote_unlock.RemoteUnlockFragment"
         android:label="RemoteUnlockFragment" />
+    <fragment
+        android:id="@+id/lockInformationFragment"
+        android:name="com.dagoras.osunolock.submanagerlock.fragment.settings.information.LockInformationFragment"
+        android:label="LockInformationFragment" />
+    <fragment
+        android:id="@+id/autoLockFragment"
+        android:name="com.dagoras.osunolock.submanagerlock.fragment.settings.autolock.AutoLockFragment"
+        android:label="AutoLockFragment" />
 </navigation>

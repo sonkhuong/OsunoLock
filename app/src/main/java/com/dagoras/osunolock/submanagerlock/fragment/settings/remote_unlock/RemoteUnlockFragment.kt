@@ -1,23 +1,23 @@
-package com.dagoras.osunolock.submanagerlock.settings.fragment
+package com.dagoras.osunolock.submanagerlock.fragment.settings.remote_unlock
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.navigation.fragment.findNavController
+import com.dagoras.osunolock.databinding.FragmentRemoteUnlockBinding
 import com.dagoras.osunolock.databinding.FragmentSettingsBinding
 
-class SettingsFragment : Fragment() {
+class RemoteUnlockFragment : Fragment() {
 
-    private lateinit var binding: FragmentSettingsBinding
+    private lateinit var binding: FragmentRemoteUnlockBinding
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        binding = FragmentSettingsBinding.inflate(inflater, container, false)
+        binding = FragmentRemoteUnlockBinding.inflate(inflater, container, false)
         return binding.root
     }
 
@@ -28,14 +28,6 @@ class SettingsFragment : Fragment() {
 
     private fun setupBinding() {
         with(binding) {
-            lineRemote.setOnClickListener {
-                navigateToRemoteUnlock()
-            }
         }
-    }
-
-    private fun navigateToRemoteUnlock() {
-        val action = SettingsFragmentDirections.actionSettingsFragmentToRemoteUnlockFragment()
-        findNavController().navigate(action)
     }
 }
