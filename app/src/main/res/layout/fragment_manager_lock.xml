@@ -40,7 +40,6 @@
                 android:layout_margin="2dp"
                 android:layout_weight="1"
                 android:background="@drawable/bg_white_shape_with_stroke"
-                android:drawableTop="@drawable/ekeys_icon"
                 android:gravity="center_horizontal"
                 android:padding="10dp"
                 android:text="EKeys" />
@@ -52,7 +51,6 @@
                 android:layout_margin="2dp"
                 android:layout_weight="1"
                 android:background="@drawable/bg_white_shape_with_stroke"
-                android:drawableTop="@drawable/khoa_icon"
                 android:gravity="center_horizontal"
                 android:padding="10dp"
                 android:text="PassCodes" />
@@ -64,7 +62,6 @@
                 android:layout_margin="2dp"
                 android:layout_weight="1"
                 android:background="@drawable/bg_white_shape_with_stroke"
-                android:drawableTop="@drawable/khoa_icon"
                 android:gravity="center_horizontal"
                 android:padding="10dp"
                 android:text="Cards" />
@@ -76,7 +73,6 @@
                 android:layout_margin="2dp"
                 android:layout_weight="1"
                 android:background="@drawable/bg_white_shape_with_stroke"
-                android:drawableTop="@drawable/khoa_icon"
                 android:gravity="center_horizontal"
                 android:padding="10dp"
                 android:text="FingerPrints" />
@@ -96,7 +92,6 @@
                 android:layout_margin="2dp"
                 android:layout_weight="1"
                 android:background="@drawable/bg_white_shape_with_stroke"
-                android:drawableTop="@drawable/khoa_icon"
                 android:gravity="center_horizontal"
                 android:padding="10dp"
                 android:text="Remote" />
@@ -108,7 +103,6 @@
                 android:layout_margin="2dp"
                 android:layout_weight="1"
                 android:background="@drawable/bg_white_shape_with_stroke"
-                android:drawableTop="@drawable/khoa_icon"
                 android:gravity="center_horizontal"
                 android:padding="10dp"
                 android:text="Authorized Admin" />
@@ -120,7 +114,6 @@
                 android:layout_margin="2dp"
                 android:layout_weight="1"
                 android:background="@drawable/bg_white_shape_with_stroke"
-                android:drawableTop="@drawable/khoa_icon"
                 android:gravity="center_horizontal"
                 android:padding="10dp"
                 android:text="Records" />
@@ -132,7 +125,6 @@
                 android:layout_margin="2dp"
                 android:layout_weight="1"
                 android:background="@drawable/bg_white_shape_with_stroke"
-                android:drawableTop="@drawable/khoa_icon"
                 android:gravity="center_horizontal"
                 android:padding="10dp"
                 android:text="Settings" />
