@@ -3,6 +3,18 @@
 
     <!-- Remote Unlock -->
     <string name="remote_unlock_str">This Feature allows you to Unlock the Smart Lock Remotely via a Gateway. This Feature can ONLY be Turned ON or OFF via Bluetooth.</string>
+    <!-- -->
+
+    <!--    Menu list-->
+    <string name="menu_add_lock">Add Lock</string>
+    <string name="menu_gateway">Gateway</string>
+    <string name="menu_messages">Message</string>
+    <string name="menu_customer_service">Custom service</string>
+    <string name="menu_setting">Setting</string>
+    <string name="menu_work_with">Work with</string>
+    <string name="nav_open">Open</string>
+    <string name="nav_close">Close</string>
+
 
     <!-- Auto Lock -->
     <string name="auto_lock_str">The lock will lock automatically after the time is up. Please unlock it for one time first to make the setting available.</string>

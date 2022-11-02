@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_add_lock"
+            android:icon="@drawable/ic_add"
+            android:title="@string/menu_add_lock" />
+        <item
+            android:id="@+id/nav_gateway"
+            android:icon="@drawable/ic_wifi"
+            android:title="@string/menu_gateway" />
+        <item
+            android:id="@+id/nav_message"
+            android:icon="@drawable/ic_message"
+            android:title="@string/menu_messages" />
+        <item
+            android:id="@+id/nav_service"
+            android:icon="@drawable/ic_info"
+            android:title="@string/menu_customer_service" />
+        <item
+            android:id="@+id/nav_setting"
+            android:icon="@drawable/ic_setting"
+            android:title="@string/menu_setting" />
+        <item
+            android:id="@+id/nav_cowork"
+            android:icon="@drawable/ic_group_work"
+            android:title="@string/menu_work_with" />
+    </group>
+</menu>

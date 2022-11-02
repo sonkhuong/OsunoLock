@@ -16,6 +16,7 @@
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:background="@color/blue"
+            app:titleTextColor="@color/white"
             android:theme="@style/Theme.AppCompat.Light.DarkActionBar"
             app:layout_constraintTop_toTopOf="parent"
             app:popupTheme="@style/Theme.AppCompat.Light" />
@@ -38,6 +39,6 @@
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_gravity="start"
-        app:headerLayout="@layout/view_header"
-        app:menu="@menu/drawer_manager_account_menu" />
+        app:headerLayout="@layout/nav_header"
+        app:menu="@menu/drawer_view" />
 </androidx.drawerlayout.widget.DrawerLayout>
