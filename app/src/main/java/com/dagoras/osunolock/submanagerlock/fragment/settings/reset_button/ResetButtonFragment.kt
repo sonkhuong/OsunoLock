@@ -1,22 +1,22 @@
-package com.dagoras.osunolock.submanagerlock.fragment.settings.autolock
+package com.dagoras.osunolock.submanagerlock.fragment.settings.reset_button
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import com.dagoras.osunolock.databinding.FragmentAutoLockBinding
+import com.dagoras.osunolock.databinding.FragmentResetButtonBinding
 
-class AutoLockFragment : Fragment() {
+class ResetButtonFragment : Fragment() {
 
-    private lateinit var binding: FragmentAutoLockBinding
+    private lateinit var binding: FragmentResetButtonBinding
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        binding = FragmentAutoLockBinding.inflate(inflater, container, false)
+        binding = FragmentResetButtonBinding.inflate(inflater, container, false)
         return binding.root
     }
 

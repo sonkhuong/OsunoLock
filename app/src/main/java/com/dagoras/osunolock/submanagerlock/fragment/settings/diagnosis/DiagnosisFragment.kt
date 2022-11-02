@@ -1,22 +1,22 @@
-package com.dagoras.osunolock.submanagerlock.fragment.settings.remote_unlock
+package com.dagoras.osunolock.submanagerlock.fragment.settings.diagnosis
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import com.dagoras.osunolock.databinding.FragmentRemoteUnlockBinding
+import com.dagoras.osunolock.databinding.FragmentDiagnosisBinding
 
-class RemoteUnlockFragment : Fragment() {
+class DiagnosisFragment : Fragment() {
 
-    private lateinit var binding: FragmentRemoteUnlockBinding
+    private lateinit var binding: FragmentDiagnosisBinding
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        binding = FragmentRemoteUnlockBinding.inflate(inflater, container, false)
+        binding = FragmentDiagnosisBinding.inflate(inflater, container, false)
         return binding.root
     }
 

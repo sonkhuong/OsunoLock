@@ -1,22 +1,22 @@
-package com.dagoras.osunolock.submanagerlock.fragment.settings.remote_unlock
+package com.dagoras.osunolock.submanagerlock.fragment.settings.tamper_alert
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import com.dagoras.osunolock.databinding.FragmentRemoteUnlockBinding
+import com.dagoras.osunolock.databinding.FragmentTamperAlertBinding
 
-class RemoteUnlockFragment : Fragment() {
+class TamperAlertFragment : Fragment() {
 
-    private lateinit var binding: FragmentRemoteUnlockBinding
+    private lateinit var binding: FragmentTamperAlertBinding
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        binding = FragmentRemoteUnlockBinding.inflate(inflater, container, false)
+        binding = FragmentTamperAlertBinding.inflate(inflater, container, false)
         return binding.root
     }
 

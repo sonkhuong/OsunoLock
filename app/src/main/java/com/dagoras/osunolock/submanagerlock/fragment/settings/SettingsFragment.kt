@@ -28,6 +28,34 @@ class SettingsFragment : Fragment() {
 
     private fun setupBinding() {
         with(binding) {
+            lineInformation.setOnClickListener {
+                navigateToLockInformation()
+            }
+
+            lineAutoLock.setOnClickListener {
+                navigateToAutoLock()
+            }
+
+            lineLockSound.setOnClickListener {
+                navigateToLockSound()
+            }
+
+            lineTamperAlert.setOnClickListener {
+                navigateToTamperAlert()
+            }
+
+            lineDiagnosis.setOnClickListener {
+                navigateToDiagnosis()
+            }
+
+            lineResetButton.setOnClickListener {
+                navigateToResetButton()
+            }
+
+            lineUploadData.setOnClickListener {
+                navigateToUploadData()
+            }
+
             lineRemote.setOnClickListener {
                 navigateToRemoteUnlock()
             }
@@ -36,6 +64,41 @@ class SettingsFragment : Fragment() {
 
     private fun navigateToRemoteUnlock() {
         val action = SettingsFragmentDirections.actionSettingsFragmentToRemoteUnlockFragment()
+        findNavController().navigate(action)
+    }
+
+    private fun navigateToLockInformation() {
+        val action = SettingsFragmentDirections.actionSettingsFragmentToLockInformationFragment()
+        findNavController().navigate(action)
+    }
+
+    private fun navigateToTamperAlert() {
+        val action = SettingsFragmentDirections.actionSettingsFragmentToTamperAlertFragment()
+        findNavController().navigate(action)
+    }
+
+    private fun navigateToAutoLock() {
+        val action = SettingsFragmentDirections.actionSettingsFragmentToAutoLockFragment()
+        findNavController().navigate(action)
+    }
+
+    private fun navigateToDiagnosis() {
+        val action = SettingsFragmentDirections.actionSettingsFragmentToDiagnosisFragment()
+        findNavController().navigate(action)
+    }
+
+    private fun navigateToResetButton() {
+        val action = SettingsFragmentDirections.actionSettingsFragmentToResetButtonFragment()
+        findNavController().navigate(action)
+    }
+
+    private fun navigateToLockSound() {
+        val action = SettingsFragmentDirections.actionSettingsFragmentToLockSoundFragment()
+        findNavController().navigate(action)
+    }
+
+    private fun navigateToUploadData() {
+        val action = SettingsFragmentDirections.actionSettingsFragmentToUploadDataFragment()
         findNavController().navigate(action)
     }
 }
