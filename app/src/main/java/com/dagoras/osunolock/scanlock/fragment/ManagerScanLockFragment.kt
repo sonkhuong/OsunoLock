@@ -5,10 +5,14 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.view.animation.AnimationUtils
+import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.dagoras.osunolock.R
 import com.dagoras.osunolock.databinding.FragmentManagerScanLockBinding
+import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.flow.combine
+import kotlinx.coroutines.launch
 
 class ManagerScanLockFragment : Fragment() {
 
@@ -25,58 +29,92 @@ class ManagerScanLockFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        viewLayout()
-        findLock()
+        setupBinding()
+        chooseOption()
     }
 
-    private fun findLock() {
+    private fun chooseOption() {
         with(binding) {
-            buttonDoorLock.setOnClickListener {
-                val action =
-                    ManagerScanLockFragmentDirections.actionManagerScanLockFragmentToFragmentScanLockWithBLT2()
-                findNavController().navigate(action)
+            buttonSmartKey.setOnClickListener {
+                setupChooseAnim(buttonGateKey, buttonRollingDoor, buttonTimerDoor)
+                navigateToScanLockWithBLT()
+            }
+
+            buttonGateKey.setOnClickListener {
+                setupChooseAnim(buttonSmartKey, buttonRollingDoor, buttonTimerDoor)
+                navigateToScanLockWithBLT()
+            }
+
+            buttonRollingDoor.setOnClickListener {
+                navigateToScanLockWithBLT()
+                setupChooseAnim(buttonGateKey, buttonSmartKey, buttonTimerDoor)
+            }
+
+            buttonTimerDoor.setOnClickListener {
+                navigateToScanLockWithBLT()
+                setupChooseAnim(buttonGateKey, buttonRollingDoor, buttonSmartKey)
             }
         }
     }
 
-    private fun viewLayout() {
+    private fun setupBinding() {
         with(binding) {
-            buttonDoorLock.startAnimation(
-                AnimationUtils.loadAnimation(
-                    context,
-                    R.anim.anim_swipe_end
-                )
-            )
-            buttonUnKnowLock.startAnimation(
-                AnimationUtils.loadAnimation(
-                    context,
-                    R.anim.anim_fade_in
-                )
-            )
-            buttonSmartLock.startAnimation(
-                AnimationUtils.loadAnimation(
-                    context,
-                    R.anim.anim_slide_up
-                )
-            )
-            buttonHomeLock.startAnimation(
-                AnimationUtils.loadAnimation(
-                    context,
-                    R.anim.anim_slide_down
-                )
-            )
-            buttonCarLock.startAnimation(
-                AnimationUtils.loadAnimation(
-                    context,
-                    R.anim.anim_swipe_end
-                )
-            )
-            buttonViceLock.startAnimation(
+            buttonSmartKey.startAnimation(
                 AnimationUtils.loadAnimation(
                     context,
                     R.anim.anim_swipe_start
                 )
             )
+            buttonRollingDoor.startAnimation(
+                AnimationUtils.loadAnimation(
+                    context,
+                    R.anim.anim_swipe_start
+                )
+            )
+            buttonGateKey.startAnimation(
+                AnimationUtils.loadAnimation(
+                    context,
+                    R.anim.anim_swipe_end
+                )
+            )
+            buttonTimerDoor.startAnimation(
+                AnimationUtils.loadAnimation(
+                    context,
+                    R.anim.anim_swipe_end
+                )
+            )
         }
+    }
+
+    private fun setupChooseAnim(button1: TextView, button2: TextView, button3: TextView) {
+        closeButton(button1)
+        closeButton(button2)
+        closeButton(button3)
+    }
+
+    private fun closeButton(button: TextView) {
+        with(binding) {
+            if (button == buttonSmartKey || button == buttonRollingDoor) {
+                button.startAnimation(
+                    AnimationUtils.loadAnimation(
+                        context,
+                        R.anim.anim_swipe_anti_end
+                    )
+                )
+            } else {
+                button.startAnimation(
+                    AnimationUtils.loadAnimation(
+                        context,
+                        R.anim.anim_swipe_anti_start
+                    )
+                )
+            }
+        }
+    }
+
+    private fun navigateToScanLockWithBLT() {
+        val action =
+            ManagerScanLockFragmentDirections.actionManagerScanLockFragmentToFragmentScanLockWithBLT()
+        findNavController().navigate(action)
     }
 }

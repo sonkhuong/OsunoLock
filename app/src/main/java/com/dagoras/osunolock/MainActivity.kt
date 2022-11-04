@@ -39,7 +39,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         val result = when (item.itemId) {
             R.id.nav_setting -> {
                 val action =
-                    ManagerScanLockFragmentDirections.actionManagerScanLockFragmentToSystemSettingFragment2()
+                    ManagerScanLockFragmentDirections.actionManagerScanLockFragmentToSystemSettingFragment()
                 navController.navigate(action)
                 true
             }

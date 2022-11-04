@@ -8,18 +8,18 @@
         android:name="com.dagoras.osunolock.scanlock.fragment.ManagerScanLockFragment"
         android:label="ManagerScanLockFragment">
         <action
-            android:id="@+id/action_managerScanLockFragment_to_fragmentScanLockWithBLT2"
-            app:destination="@id/scanLockWithBLT2Fragment" />
+            android:id="@+id/action_managerScanLockFragment_to_fragmentScanLockWithBLT"
+            app:destination="@id/scanLockWithBLTFragment" />
         <action
-            android:id="@+id/action_managerScanLockFragment_to_systemSettingFragment2"
+            android:id="@+id/action_managerScanLockFragment_to_systemSettingFragment"
             app:destination="@id/systemSettingFragment" />
     </fragment>
     <fragment
-        android:id="@+id/scanLockWithBLT2Fragment"
+        android:id="@+id/scanLockWithBLTFragment"
         android:name="com.dagoras.osunolock.scanlock.fragment.ScanLockWithBLTFragment"
         android:label="ScanLockWithBLTFragment">
         <action
-            android:id="@+id/action_fragmentScanLockWithBLT2_to_managerLockFragment"
+            android:id="@+id/action_fragmentScanLockWithBLT_to_managerLockFragment"
             app:destination="@id/managerLockFragment" />
     </fragment>
     <fragment
@@ -32,7 +32,7 @@
     </fragment>
     <fragment
         android:id="@+id/settingsFragment"
-        android:name="com.dagoras.osunolock.submanagerlock.settings.fragment.SettingsFragment"
+        android:name="com.dagoras.osunolock.submanagerlock.fragment.settings.SettingsFragment"
         android:label="SettingsFragment">
         <action
             android:id="@+id/action_settingsFragment_to_remoteUnlockFragment"

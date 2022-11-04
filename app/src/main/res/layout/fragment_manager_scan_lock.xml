@@ -4,97 +4,61 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <!-- Thieu header view -->
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/constraintLock"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:background="@color/gray"
-        app:layout_constraintDimensionRatio="1:1"
+        android:orientation="vertical"
+        app:layout_constraintDimensionRatio="8:5"
         app:layout_constraintTop_toTopOf="parent">
 
-        <TextView
-            android:id="@+id/buttonUnKnowLock"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_margin="1dp"
-            android:background="@drawable/bg_white_shape_with_stroke"
-            android:drawablePadding="15dp"
-            android:gravity="center|start"
-            android:paddingStart="20dp"
-            android:text="UnKnow Lock"
-            app:layout_constraintBottom_toTopOf="@id/buttonViceLock"
-            app:layout_constraintEnd_toStartOf="@id/buttonSmartLock"
-            app:layout_constraintStart_toEndOf="@id/buttonHomeLock"
-            app:layout_constraintTop_toBottomOf="@id/buttonCarLock" />
-
-        <TextView
-            android:id="@+id/buttonDoorLock"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="100dp"
-            android:layout_margin="1dp"
-            android:background="@drawable/bg_white_shape_with_stroke"
-            android:drawablePadding="15dp"
-            android:gravity="center|start"
-            android:paddingStart="20dp"
-            android:text="Door Lock"
-            app:layout_constraintTop_toTopOf="parent" />
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal">
 
-        <TextView
-            android:id="@+id/buttonHomeLock"
-            android:layout_width="100dp"
-            android:layout_height="0dp"
-            android:layout_margin="1dp"
-            android:background="@drawable/bg_white_shape_with_stroke"
-            android:drawablePadding="15dp"
-            android:gravity="center|start"
-            android:paddingStart="20dp"
-            android:text="Home Lock"
-            app:layout_constraintBottom_toTopOf="@id/buttonViceLock"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/buttonDoorLock" />
+            <TextView
+                android:id="@+id/buttonSmartKey"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/red"
+                android:gravity="center"
+                android:text="Smart Key" />
 
-        <TextView
-            android:id="@+id/buttonCarLock"
-            android:layout_width="0dp"
-            android:layout_height="100dp"
-            android:layout_margin="1dp"
-            android:background="@drawable/bg_white_shape_with_stroke"
-            android:drawablePadding="15dp"
-            android:gravity="center|start"
-            android:paddingStart="20dp"
-            android:text="Car Lock"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@id/buttonHomeLock"
-            app:layout_constraintTop_toBottomOf="@id/buttonDoorLock" />
+            <TextView
+                android:id="@+id/buttonGateKey"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/green"
+                android:gravity="center"
+                android:text="Gate Key" />
+        </LinearLayout>
 
-        <TextView
-            android:id="@+id/buttonSmartLock"
-            android:layout_width="100dp"
-            android:layout_height="0dp"
-            android:layout_margin="1dp"
-            android:background="@drawable/bg_white_shape_with_stroke"
-            android:drawablePadding="15dp"
-            android:gravity="center|start"
-            android:paddingStart="20dp"
-            android:text="Smart Lock"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/buttonCarLock" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal">
 
-        <TextView
-            android:id="@+id/buttonViceLock"
-            android:layout_width="0dp"
-            android:layout_height="100dp"
-            android:layout_margin="1dp"
-            android:background="@drawable/bg_white_shape_with_stroke"
-            android:drawablePadding="15dp"
-            android:gravity="center|start"
-            android:paddingStart="20dp"
-            android:text="Vice Lock"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@id/buttonSmartLock"
-            app:layout_constraintStart_toStartOf="parent" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
+            <TextView
+                android:id="@+id/buttonRollingDoor"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/purple_200"
+                android:gravity="center"
+                android:text="Rolling Door" />
+
+            <TextView
+                android:id="@+id/buttonTimerDoor"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/gray"
+                android:gravity="center"
+                android:text="Timer Door" />
+        </LinearLayout>
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

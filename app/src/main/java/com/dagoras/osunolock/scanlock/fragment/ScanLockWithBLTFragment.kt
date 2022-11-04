@@ -23,6 +23,6 @@ class ScanLockWithBLTFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        findNavController().navigate(ScanLockWithBLTFragmentDirections.actionFragmentScanLockWithBLT2ToManagerLockFragment())
+        findNavController().navigate(ScanLockWithBLTFragmentDirections.actionFragmentScanLockWithBLTToManagerLockFragment())
     }
 }
