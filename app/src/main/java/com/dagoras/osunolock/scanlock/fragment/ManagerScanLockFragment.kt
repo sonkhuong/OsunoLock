@@ -10,9 +10,7 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.dagoras.osunolock.R
 import com.dagoras.osunolock.databinding.FragmentManagerScanLockBinding
-import kotlinx.coroutines.GlobalScope
-import kotlinx.coroutines.flow.combine
-import kotlinx.coroutines.launch
+import kotlinx.coroutines.*
 
 class ManagerScanLockFragment : Fragment() {
 
@@ -36,7 +34,6 @@ class ManagerScanLockFragment : Fragment() {
     private fun chooseOption() {
         with(binding) {
             buttonSmartKey.setOnClickListener {
-                setupChooseAnim(buttonGateKey, buttonRollingDoor, buttonTimerDoor)
                 navigateToScanLockWithBLT()
             }
 

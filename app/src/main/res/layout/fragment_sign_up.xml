@@ -136,7 +136,7 @@
         app:layout_constraintTop_toBottomOf="@id/constraintVerify" />
 
     <TextView
-        android:id="@+id/urlSignupAccount"
+        android:id="@+id/urlLoginAccount"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="15dp"

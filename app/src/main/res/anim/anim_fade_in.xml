@@ -2,8 +2,9 @@
 <set xmlns:android="http://schemas.android.com/apk/res/android"
     android:fillAfter="true"
     android:interpolator="@android:interpolator/accelerate_decelerate">
+
     <alpha
-        android:duration="2000"
+        android:duration="3000"
         android:fromAlpha="0"
         android:toAlpha="1" />
 </set>

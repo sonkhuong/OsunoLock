@@ -2,11 +2,13 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/gray">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
+        android:layout_margin="5dp"
         android:orientation="vertical"
         app:layout_constraintDimensionRatio="8:5"
         app:layout_constraintTop_toTopOf="parent">
@@ -21,18 +23,24 @@
                 android:id="@+id/buttonSmartKey"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:layout_margin="5dp"
                 android:layout_weight="1"
+                android:background="@color/white"
                 android:drawableStart="@drawable/lock_1"
-                android:gravity="center"
+                android:gravity="start|center_vertical"
+                android:paddingStart="30dp"
                 android:text="Smart Key" />
 
             <TextView
                 android:id="@+id/buttonGateKey"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:layout_margin="5dp"
                 android:layout_weight="1"
+                android:background="@color/white"
                 android:drawableEnd="@drawable/lock_2"
-                android:gravity="center"
+                android:gravity="end|center_vertical"
+                android:paddingEnd="30dp"
                 android:text="Gate Key" />
         </LinearLayout>
 
@@ -46,18 +54,24 @@
                 android:id="@+id/buttonRollingDoor"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:layout_margin="5dp"
                 android:layout_weight="1"
+                android:background="@color/white"
                 android:drawableStart="@drawable/lock_3"
-                android:gravity="center"
+                android:gravity="start|center_vertical"
+                android:paddingStart="30dp"
                 android:text="Rolling Door" />
 
             <TextView
                 android:id="@+id/buttonTimerDoor"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:layout_margin="5dp"
                 android:layout_weight="1"
+                android:background="@color/white"
                 android:drawableEnd="@drawable/lock_4"
-                android:gravity="center"
+                android:gravity="end|center_vertical"
+                android:paddingEnd="30dp"
                 android:text="Timer Door" />
         </LinearLayout>
     </LinearLayout>

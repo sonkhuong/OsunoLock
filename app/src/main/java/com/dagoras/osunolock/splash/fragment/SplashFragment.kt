@@ -8,18 +8,18 @@ import android.view.animation.AnimationUtils
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.dagoras.osunolock.R
-import com.dagoras.osunolock.databinding.FragmentLoginBinding
+import com.dagoras.osunolock.databinding.FragmentSplashBinding
 
-class LoginFragment : Fragment() {
+class SplashFragment : Fragment() {
 
-    private lateinit var binding: FragmentLoginBinding
+    private lateinit var binding: FragmentSplashBinding
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        binding = FragmentLoginBinding.inflate(inflater, container, false)
+        binding = FragmentSplashBinding.inflate(inflater, container, false)
         return binding.root
     }
 
@@ -30,40 +30,28 @@ class LoginFragment : Fragment() {
 
     private fun setupBinding() {
         with(binding) {
-            layoutLogin.visibility = View.VISIBLE
+
             val background: Thread = object : Thread() {
                 override fun run() {
                     try {
-                        layoutLogin.startAnimation(
+                        logoSplash.startAnimation(
                             AnimationUtils.loadAnimation(
                                 context,
-                                R.anim.anim_slide_up
+                                R.anim.anim_splash_to_login
                             )
                         )
-                        sleep(2000L)
+                        sleep(3500L)
+                        navigateToLogin()
                     } catch (e: Exception) {
                     }
                 }
             }
             background.start()
-
-            buttonLogin.setOnClickListener {
-                navigateToMainActivity()
-            }
-
-            urlSignupAccount.setOnClickListener {
-                navigateToSignUpFragment()
-            }
         }
     }
 
-    private fun navigateToMainActivity() {
-        val action = LoginFragmentDirections.actionLoginFragmentToMainActivity()
-        findNavController().navigate(action)
-    }
-
-    private fun navigateToSignUpFragment() {
-        val action = LoginFragmentDirections.actionLoginFragmentToSignUpFragment()
+    private fun navigateToLogin() {
+        val action = SplashFragmentDirections.actionSplashFragmentToLoginFragment()
         findNavController().navigate(action)
     }
 }

@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import com.dagoras.osunolock.databinding.FragmentSignUpBinding
 
 class SignUpFragment : Fragment() {
@@ -27,6 +28,13 @@ class SignUpFragment : Fragment() {
 
     private fun setupBinding() {
         with(binding) {
+            urlLoginAccount.setOnClickListener {
+                navigateToLoginFragment()
+            }
         }
+    }
+
+    private fun navigateToLoginFragment() {
+        findNavController().popBackStack()
     }
 }

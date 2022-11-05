@@ -6,7 +6,7 @@
     <!-- -->
 
     <!--    Menu list-->
-    <string name="menu_add_lock">Add Lock</string>
+    <string name="menu_add_lock">Thêm Khóa</string>
     <string name="menu_gateway">Gateway</string>
     <string name="menu_messages">Message</string>
     <string name="menu_customer_service">Custom service</string>
