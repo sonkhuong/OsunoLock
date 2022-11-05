@@ -1,5 +1,3 @@
 package com.dagoras.osunolock.models
 
-class Lock(private val name: String) {
-
-}
+class Lock(val name: String)
