@@ -25,7 +25,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
         setSupportActionBar(binding.toolbarHeader)
-        drawerLayout = binding.drawer
+        drawerLayout = binding.mainDrawer
         val navHostFragment =
             supportFragmentManager.findFragmentById(R.id.navigationHost) as NavHostFragment
         navController = navHostFragment.navController
