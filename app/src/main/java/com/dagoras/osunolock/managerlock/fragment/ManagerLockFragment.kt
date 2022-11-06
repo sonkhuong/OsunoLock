@@ -28,11 +28,74 @@ class ManagerLockFragment : Fragment() {
 
     private fun setupBinding() {
         with(binding) {
+            buttonEKeys.setOnClickListener {
+                navigateToEKeys()
+            }
+
+            buttonPassCodes.setOnClickListener {
+                navigateToPassCodes()
+            }
+
+            buttonCards.setOnClickListener {
+                navigateToCards()
+            }
+
+            buttonFingerPrints.setOnClickListener {
+                navigateToFingerPrints()
+            }
+
+            buttonRemotes.setOnClickListener {
+                navigateToRemotes()
+            }
+
+            buttonAuthorizedAdmins.setOnClickListener {
+                navigateToAdminAuthorizes()
+            }
+
+            buttonRecords.setOnClickListener {
+                navigateToRecords()
+            }
+
             buttonSettings.setOnClickListener {
                 navigateToSettings()
             }
-            buttonRemote
         }
+    }
+
+    private fun navigateToEKeys() {
+        val action = ManagerLockFragmentDirections.actionManagerLockFragmentToEKeysFragment()
+        findNavController().navigate(action)
+    }
+
+    private fun navigateToPassCodes() {
+        val action = ManagerLockFragmentDirections.actionManagerLockFragmentToPassCodesFragment()
+        findNavController().navigate(action)
+    }
+
+    private fun navigateToCards() {
+        val action = ManagerLockFragmentDirections.actionManagerLockFragmentToCardsFragment()
+        findNavController().navigate(action)
+    }
+
+    private fun navigateToFingerPrints() {
+        val action = ManagerLockFragmentDirections.actionManagerLockFragmentToFingerPrintsFragment()
+        findNavController().navigate(action)
+    }
+
+    private fun navigateToRemotes() {
+        val action = ManagerLockFragmentDirections.actionManagerLockFragmentToRemotesFragment()
+        findNavController().navigate(action)
+    }
+
+    private fun navigateToAdminAuthorizes() {
+        val action =
+            ManagerLockFragmentDirections.actionManagerLockFragmentToAdminAuthorizesFragment()
+        findNavController().navigate(action)
+    }
+
+    private fun navigateToRecords() {
+        val action = ManagerLockFragmentDirections.actionManagerLockFragmentToRecordsFragment()
+        findNavController().navigate(action)
     }
 
     private fun navigateToSettings() {

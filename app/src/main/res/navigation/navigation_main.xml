@@ -29,6 +29,27 @@
         <action
             android:id="@+id/action_managerLockFragment_to_settingsFragment"
             app:destination="@id/settingsFragment" />
+        <action
+            android:id="@+id/action_managerLockFragment_to_EKeysFragment"
+            app:destination="@id/EKeysFragment" />
+        <action
+            android:id="@+id/action_managerLockFragment_to_recordsFragment"
+            app:destination="@id/recordsFragment" />
+        <action
+            android:id="@+id/action_managerLockFragment_to_adminAuthorizesFragment"
+            app:destination="@id/adminAuthorizesFragment" />
+        <action
+            android:id="@+id/action_managerLockFragment_to_cardsFragment"
+            app:destination="@id/cardsFragment" />
+        <action
+            android:id="@+id/action_managerLockFragment_to_fingerPrintsFragment"
+            app:destination="@id/fingerPrintsFragment" />
+        <action
+            android:id="@+id/action_managerLockFragment_to_passCodesFragment"
+            app:destination="@id/passCodesFragment" />
+        <action
+            android:id="@+id/action_managerLockFragment_to_remotesFragment"
+            app:destination="@id/remotesFragment" />
     </fragment>
     <fragment
         android:id="@+id/settingsFragment"
@@ -95,4 +116,32 @@
         android:id="@+id/tamperAlertFragment"
         android:name="com.dagoras.osunolock.submanagerlock.fragment.settings.tamper_alert.TamperAlertFragment"
         android:label="TamperAlertFragment" />
+    <fragment
+        android:id="@+id/EKeysFragment"
+        android:name="com.dagoras.osunolock.submanagerlock.fragment.ekeys.EKeysFragment"
+        android:label="EKeysFragment" />
+    <fragment
+        android:id="@+id/recordsFragment"
+        android:name="com.dagoras.osunolock.submanagerlock.fragment.records.RecordsFragment"
+        android:label="RecordsFragment" />
+    <fragment
+        android:id="@+id/adminAuthorizesFragment"
+        android:name="com.dagoras.osunolock.submanagerlock.fragment.admins.AdminAuthorizesFragment"
+        android:label="AdminAuthorizesFragment" />
+    <fragment
+        android:id="@+id/cardsFragment"
+        android:name="com.dagoras.osunolock.submanagerlock.fragment.cards.CardsFragment"
+        android:label="CardsFragment" />
+    <fragment
+        android:id="@+id/fingerPrintsFragment"
+        android:name="com.dagoras.osunolock.submanagerlock.fragment.fingerprints.FingerPrintsFragment"
+        android:label="FingerPrintsFragment" />
+    <fragment
+        android:id="@+id/passCodesFragment"
+        android:name="com.dagoras.osunolock.submanagerlock.fragment.passcodes.PassCodesFragment"
+        android:label="PassCodesFragment" />
+    <fragment
+        android:id="@+id/remotesFragment"
+        android:name="com.dagoras.osunolock.submanagerlock.fragment.remotes.RemotesFragment"
+        android:label="RemotesFragment" />
 </navigation>
