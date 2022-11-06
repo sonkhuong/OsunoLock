@@ -3,7 +3,6 @@
 
     <!-- Remote Unlock -->
     <string name="remote_unlock_str">This Feature allows you to Unlock the Smart Lock Remotely via a Gateway. This Feature can ONLY be Turned ON or OFF via Bluetooth.</string>
-    <!-- -->
 
     <!--    Menu list-->
     <string name="menu_add_lock">Thêm Khóa</string>

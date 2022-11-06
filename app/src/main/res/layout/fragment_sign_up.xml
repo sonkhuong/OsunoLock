@@ -1,16 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layout_signup"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:visibility="visible">
 
     <ImageView
         android:id="@+id/logoOsuno"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_marginTop="30dp"
-        android:background="@color/green"
-        app:layout_constraintDimensionRatio="16:9"
+        android:src="@drawable/logo"
+        app:layout_constraintBottom_toTopOf="@id/linearUserName"
+        app:layout_constraintHeight_percent="0.2"
         app:layout_constraintTop_toTopOf="parent" />
 
     <LinearLayout
@@ -18,9 +20,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="20dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginBottom="5dp"
         android:orientation="horizontal"
-        app:layout_constraintTop_toBottomOf="@id/logoOsuno">
+        app:layout_constraintBottom_toTopOf="@id/linearPassword">
 
         <TextView
             android:layout_width="match_parent"
@@ -40,9 +42,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="20dp"
-        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
         android:orientation="horizontal"
-        app:layout_constraintTop_toBottomOf="@id/linearUserName">
+        app:layout_constraintBottom_toTopOf="@id/linearRetypePassword">
 
         <TextView
             android:layout_width="match_parent"
@@ -58,19 +60,18 @@
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/linearRePassword"
+        android:id="@+id/linearRetypePassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginHorizontal="20dp"
-        android:layout_marginTop="5dp"
+        android:layout_margin="20dp"
         android:orientation="horizontal"
-        app:layout_constraintTop_toBottomOf="@id/linearPassword">
+        app:layout_constraintBottom_toTopOf="@id/buttonSignUp">
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="3"
-            android:text="RePassword:"
+            android:text="RPassword:"
             app:layout_constraintTop_toBottomOf="@id/logoOsuno" />
 
         <EditText
@@ -79,68 +80,28 @@
             android:layout_weight="1" />
     </LinearLayout>
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/constraintVerify"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        android:visibility="gone"
-        app:layout_constraintTop_toBottomOf="@id/linearRePassword">
-
-        <include
-            android:id="@+id/linearVerifyCode"
-            layout="@layout/fragment_verify_code" />
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:orientation="horizontal"
-            app:layout_constraintTop_toBottomOf="@id/linearVerifyCode">
-
-            <TextView
-                android:id="@+id/textResendVerifyCode"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="0dp"
-                android:layout_weight="1"
-                android:gravity="end"
-                android:paddingEnd="5dp"
-                android:text="Do not receive sms verify code? 60s" />
-
-            <TextView
-                android:id="@+id/urlResendVerifyCode"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="0dp"
-                android:layout_weight="1"
-                android:text="Resend?"
-                android:textColor="@color/blue"
-                android:textStyle="bold" />
-        </LinearLayout>
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
     <TextView
-        android:id="@+id/buttonLogin"
+        android:id="@+id/buttonSignUp"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="200dp"
         android:background="@drawable/bg_button_shape_red"
         android:gravity="center"
         android:paddingVertical="5dp"
-        android:text="Register"
+        android:text="Sign Up"
         android:textColor="@color/white"
         android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/urlLoginAccount"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/constraintVerify" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/urlLoginAccount"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="15dp"
-        android:text="Have an account yet?"
+        android:text="Don't have an account?"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />

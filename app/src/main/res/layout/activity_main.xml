@@ -15,11 +15,11 @@
             android:id="@+id/toolbarHeader"
             android:layout_width="match_parent"
             android:layout_height="200dp"
+            app:layout_wrapBehaviorInParent="included"
             android:background="@color/blue"
             app:titleTextColor="@color/white"
             android:theme="@style/Theme.AppCompat.Light.DarkActionBar"
-            app:layout_constraintTop_toTopOf="parent"
-            app:popupTheme="@style/Theme.AppCompat.Light" />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <androidx.fragment.app.FragmentContainerView
             android:id="@+id/navigationHost"
