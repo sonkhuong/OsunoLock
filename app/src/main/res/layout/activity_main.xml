@@ -14,12 +14,12 @@
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbarHeader"
             android:layout_width="match_parent"
-            android:layout_height="200dp"
-            app:layout_wrapBehaviorInParent="included"
-            android:background="@color/blue"
-            app:titleTextColor="@color/white"
+            android:layout_height="wrap_content"
+            android:background="@color/teal_200"
             android:theme="@style/Theme.AppCompat.Light.DarkActionBar"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_wrapBehaviorInParent="included"
+            app:titleTextColor="@color/white" />
 
         <androidx.fragment.app.FragmentContainerView
             android:id="@+id/navigationHost"
