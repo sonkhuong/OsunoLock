@@ -5,18 +5,18 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import com.dagoras.osunolock.databinding.FragmentCycleBinding
+import com.dagoras.osunolock.databinding.FragmentPeriodBinding
 
 class PeriodFragment : Fragment() {
 
-    private lateinit var binding: FragmentCycleBinding
+    private lateinit var binding: FragmentPeriodBinding
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        binding = FragmentCycleBinding.inflate(inflater, container, false)
+        binding = FragmentPeriodBinding.inflate(inflater, container, false)
         return binding.root
     }
 

@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import com.dagoras.osunolock.databinding.FragmentManagerListBinding
 
 class EKeysFragment : Fragment() {
@@ -27,6 +28,14 @@ class EKeysFragment : Fragment() {
 
     private fun setupBinding() {
         with(binding) {
+            buttonAddItem.setOnClickListener {
+                navigateToCreateItemManager()
+            }
         }
+    }
+
+    private fun navigateToCreateItemManager() {
+        val action = EKeysFragmentDirections.actionEKeysFragmentToCreateNewItemFragmentManager()
+        findNavController().navigate(action)
     }
 }
