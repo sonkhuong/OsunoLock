@@ -2,7 +2,7 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/nav_main"
-    app:startDestination="@id/managerScanLockFragment">
+    app:startDestination="@id/listManagerLockFragment">
     <fragment
         android:id="@+id/managerScanLockFragment"
         android:name="com.dagoras.osunolock.scanlock.fragment.ManagerScanLockFragment"
@@ -24,7 +24,7 @@
     </fragment>
     <fragment
         android:id="@+id/managerLockFragment"
-        android:name="com.dagoras.osunolock.managerlock.fragment.ManagerLockFragment"
+        android:name="com.dagoras.osunolock.manager_lock.fragment.ManagerLockFragment"
         android:label="ManagerLockFragment">
         <action
             android:id="@+id/action_managerLockFragment_to_settingsFragment"
@@ -53,7 +53,7 @@
     </fragment>
     <fragment
         android:id="@+id/settingsFragment"
-        android:name="com.dagoras.osunolock.submanagerlock.fragment.settings.SettingsFragment"
+        android:name="com.dagoras.osunolock.sub_manager_lock.fragment.settings.SettingsFragment"
         android:label="SettingsFragment">
         <action
             android:id="@+id/action_settingsFragment_to_remoteUnlockFragment"
@@ -82,7 +82,7 @@
     </fragment>
     <fragment
         android:id="@+id/remoteUnlockFragment"
-        android:name="com.dagoras.osunolock.submanagerlock.fragment.settings.remote_unlock.RemoteUnlockFragment"
+        android:name="com.dagoras.osunolock.sub_manager_lock.fragment.settings.remote_unlock.RemoteUnlockFragment"
         android:label="RemoteUnlockFragment" />
     <fragment
         android:id="@+id/systemSettingFragment"
@@ -94,35 +94,35 @@
     </fragment>
     <fragment
         android:id="@+id/lockInformationFragment"
-        android:name="com.dagoras.osunolock.submanagerlock.fragment.settings.lock_information.LockInformationFragment"
+        android:name="com.dagoras.osunolock.sub_manager_lock.fragment.settings.lock_information.LockInformationFragment"
         android:label="LockInformationFragment" />
     <fragment
         android:id="@+id/autoLockFragment"
-        android:name="com.dagoras.osunolock.submanagerlock.fragment.settings.auto_lock.AutoLockFragment"
+        android:name="com.dagoras.osunolock.sub_manager_lock.fragment.settings.auto_lock.AutoLockFragment"
         android:label="AutoLockFragment" />
     <fragment
         android:id="@+id/diagnosisFragment"
-        android:name="com.dagoras.osunolock.submanagerlock.fragment.settings.diagnosis.DiagnosisFragment"
+        android:name="com.dagoras.osunolock.sub_manager_lock.fragment.settings.diagnosis.DiagnosisFragment"
         android:label="DiagnosisFragment" />
     <fragment
         android:id="@+id/lockSoundFragment"
-        android:name="com.dagoras.osunolock.submanagerlock.fragment.settings.lock_sound.LockSoundFragment"
+        android:name="com.dagoras.osunolock.sub_manager_lock.fragment.settings.lock_sound.LockSoundFragment"
         android:label="LockSoundFragment" />
     <fragment
         android:id="@+id/resetButtonFragment"
-        android:name="com.dagoras.osunolock.submanagerlock.fragment.settings.reset_button.ResetButtonFragment"
+        android:name="com.dagoras.osunolock.sub_manager_lock.fragment.settings.reset_button.ResetButtonFragment"
         android:label="ResetButtonFragment" />
     <fragment
         android:id="@+id/uploadDataFragment"
-        android:name="com.dagoras.osunolock.submanagerlock.fragment.settings.upload_data.UploadDataFragment"
+        android:name="com.dagoras.osunolock.sub_manager_lock.fragment.settings.upload_data.UploadDataFragment"
         android:label="UploadDataFragment" />
     <fragment
         android:id="@+id/tamperAlertFragment"
-        android:name="com.dagoras.osunolock.submanagerlock.fragment.settings.tamper_alert.TamperAlertFragment"
+        android:name="com.dagoras.osunolock.sub_manager_lock.fragment.settings.tamper_alert.TamperAlertFragment"
         android:label="TamperAlertFragment" />
     <fragment
         android:id="@+id/EKeysFragment"
-        android:name="com.dagoras.osunolock.submanagerlock.fragment.ekeys.EKeysFragment"
+        android:name="com.dagoras.osunolock.sub_manager_lock.fragment.ekeys.EKeysFragment"
         android:label="EKeysFragment" >
         <action
             android:id="@+id/action_EKeysFragment_to_createNewItemFragmentManager"
@@ -130,7 +130,7 @@
     </fragment>
     <fragment
         android:id="@+id/recordsFragment"
-        android:name="com.dagoras.osunolock.submanagerlock.fragment.records.RecordsFragment"
+        android:name="com.dagoras.osunolock.sub_manager_lock.fragment.records.RecordsFragment"
         android:label="RecordsFragment" >
         <action
             android:id="@+id/action_recordsFragment_to_createNewItemFragmentManager"
@@ -138,7 +138,7 @@
     </fragment>
     <fragment
         android:id="@+id/adminAuthorizesFragment"
-        android:name="com.dagoras.osunolock.submanagerlock.fragment.admins.AdminAuthorizesFragment"
+        android:name="com.dagoras.osunolock.sub_manager_lock.fragment.admins.AdminAuthorizesFragment"
         android:label="AdminAuthorizesFragment" >
         <action
             android:id="@+id/action_adminAuthorizesFragment_to_createNewItemFragmentManager"
@@ -146,7 +146,7 @@
     </fragment>
     <fragment
         android:id="@+id/cardsFragment"
-        android:name="com.dagoras.osunolock.submanagerlock.fragment.cards.CardsFragment"
+        android:name="com.dagoras.osunolock.sub_manager_lock.fragment.cards.CardsFragment"
         android:label="CardsFragment" >
         <action
             android:id="@+id/action_cardsFragment_to_createNewItemFragmentManager"
@@ -154,7 +154,7 @@
     </fragment>
     <fragment
         android:id="@+id/fingerPrintsFragment"
-        android:name="com.dagoras.osunolock.submanagerlock.fragment.fingerprints.FingerPrintsFragment"
+        android:name="com.dagoras.osunolock.sub_manager_lock.fragment.fingerprints.FingerPrintsFragment"
         android:label="FingerPrintsFragment" >
         <action
             android:id="@+id/action_fingerPrintsFragment_to_createNewItemFragmentManager"
@@ -162,7 +162,7 @@
     </fragment>
     <fragment
         android:id="@+id/passCodesFragment"
-        android:name="com.dagoras.osunolock.submanagerlock.fragment.passcodes.PassCodesFragment"
+        android:name="com.dagoras.osunolock.sub_manager_lock.fragment.passcodes.PassCodesFragment"
         android:label="PassCodesFragment" >
         <action
             android:id="@+id/action_passCodesFragment_to_createNewItemFragmentManager"
@@ -170,7 +170,7 @@
     </fragment>
     <fragment
         android:id="@+id/remotesFragment"
-        android:name="com.dagoras.osunolock.submanagerlock.fragment.remotes.RemotesFragment"
+        android:name="com.dagoras.osunolock.sub_manager_lock.fragment.remotes.RemotesFragment"
         android:label="RemotesFragment" >
         <action
             android:id="@+id/action_remotesFragment_to_createNewItemFragmentManager"
@@ -178,6 +178,14 @@
     </fragment>
     <fragment
         android:id="@+id/createNewItemFragmentManager"
-        android:name="com.dagoras.osunolock.submanagerlock.fragment.CreateNewItemFragmentManager"
+        android:name="com.dagoras.osunolock.sub_manager_lock.fragment.CreateNewItemFragmentManager"
         android:label="CreateNewItemFragmentManager" />
+    <fragment
+        android:id="@+id/listManagerLockFragment"
+        android:name="com.dagoras.osunolock.list_manager.ListManagerLockFragment"
+        android:label="ListManagerLockFragment" >
+        <action
+            android:id="@+id/action_listManagerLockFragment_to_managerScanLockFragment"
+            app:destination="@id/managerScanLockFragment" />
+    </fragment>
 </navigation>
