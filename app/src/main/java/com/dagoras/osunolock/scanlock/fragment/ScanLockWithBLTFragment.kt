@@ -56,11 +56,7 @@ class ScanLockWithBLTFragment : Fragment() {
             requestTurnOnBT()
         }
         with(binding) {
-            buttonNextScreen.setOnClickListener {
-                navigateToManagerLock()
-            }
-
-            buttonScanBLT.setOnClickListener {
+            viewToolbar.buttonScan.setOnClickListener {
                 Log.d(TAG, "setupBinding: BT adapter = $bluetoothAdapter")
                 val filter = IntentFilter(BluetoothDevice.ACTION_FOUND)
                 requireActivity().registerReceiver(findDeviceReceiver, filter)

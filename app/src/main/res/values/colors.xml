@@ -14,4 +14,7 @@
     <color name="blue">#0040FF</color>
     <color name="blue_overlay">#CC3769FF</color>
     <color name="red">#CCFF0000</color>
+    <color name="mid_blue">#323EA2</color>
+    <color name="top_blue">#457BDD</color>
+    <color name="bottom_blue">#2E388D</color>
 </resources>

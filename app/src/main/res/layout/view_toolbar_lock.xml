@@ -7,41 +7,59 @@
     <TextView
         android:id="@+id/fakeToolbar"
         android:layout_width="match_parent"
-        android:layout_height="100dp"
+        android:layout_height="150dp"
         android:background="@drawable/bg_bottom_to_mid_blue"
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintToolbar"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
+        android:layout_height="450dp"
         android:layout_marginHorizontal="30dp"
         android:background="@drawable/bg_shape_bottom_to_top_blue"
         app:layout_constraintTop_toTopOf="@id/fakeToolbar">
 
         <TextView
-            android:id="@+id/titleScan"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="15dp"
             android:gravity="center"
-            android:text="All Devices Of Osuno"
+            android:text="OSN - 3363"
             android:textColor="@color/white"
             android:textSize="20sp"
             android:textStyle="bold"
-            app:layout_constraintBottom_toTopOf="@id/buttonScan" />
+            app:layout_constraintBottom_toTopOf="@id/buttonLock" />
+
+        <ImageButton
+            android:id="@+id/buttonLock"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginBottom="50dp"
+            android:background="@drawable/close_key"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/buttonScan"
+            android:id="@+id/urlTouchToUnlock"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginHorizontal="74dp"
-            android:background="@drawable/bg_white_shape"
+            android:layout_marginTop="10dp"
             android:gravity="center"
-            android:padding="10dp"
-            android:text="Scan All Devices"
-            android:textColor="@color/black"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            android:text="Touch to unlock your Lock"
+            android:textColor="@color/white"
+            app:layout_constraintTop_toBottomOf="@id/buttonLock" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:drawableTop="@drawable/battery"
+            android:drawablePadding="5dp"
+            android:gravity="center"
+            android:text="65%"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -3,7 +3,12 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/gray">
+    android:background="@color/low_gray_overlay">
+
+    <include
+        android:id="@+id/viewToolbar"
+        layout="@layout/view_toolbar"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -11,7 +16,7 @@
         android:layout_margin="5dp"
         android:orientation="vertical"
         app:layout_constraintDimensionRatio="8:5"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toBottomOf="@id/viewToolbar">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -25,7 +30,7 @@
                 android:layout_height="match_parent"
                 android:layout_margin="5dp"
                 android:layout_weight="1"
-                android:background="@color/white"
+                android:background="@drawable/bg_white_shape_with_blue_stroke"
                 android:drawableStart="@drawable/lock_1"
                 android:gravity="start|center_vertical"
                 android:paddingStart="30dp"
@@ -37,7 +42,7 @@
                 android:layout_height="match_parent"
                 android:layout_margin="5dp"
                 android:layout_weight="1"
-                android:background="@color/white"
+                android:background="@drawable/bg_white_shape_with_blue_stroke"
                 android:drawableEnd="@drawable/lock_2"
                 android:gravity="end|center_vertical"
                 android:paddingEnd="30dp"
@@ -56,7 +61,7 @@
                 android:layout_height="match_parent"
                 android:layout_margin="5dp"
                 android:layout_weight="1"
-                android:background="@color/white"
+                android:background="@drawable/bg_white_shape_with_blue_stroke"
                 android:drawableStart="@drawable/lock_3"
                 android:gravity="start|center_vertical"
                 android:paddingStart="30dp"
@@ -68,7 +73,7 @@
                 android:layout_height="match_parent"
                 android:layout_margin="5dp"
                 android:layout_weight="1"
-                android:background="@color/white"
+                android:background="@drawable/bg_white_shape_with_blue_stroke"
                 android:drawableEnd="@drawable/lock_4"
                 android:gravity="end|center_vertical"
                 android:paddingEnd="30dp"
