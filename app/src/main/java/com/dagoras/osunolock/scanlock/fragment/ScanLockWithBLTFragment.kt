@@ -22,14 +22,17 @@ import androidx.activity.result.contract.ActivityResultContracts
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
+import com.dagoras.osunolock.adapter.LockAdapter
 import com.dagoras.osunolock.databinding.FragmentScanLockWithBltBinding
+import com.dagoras.osunolock.models.DeviceInfo
 
 class ScanLockWithBLTFragment : Fragment() {
-
-    private lateinit var binding: FragmentScanLockWithBltBinding
     private val TAG = "ScanLockWithBLTFragment"
-
+    private lateinit var binding: FragmentScanLockWithBltBinding
     private var bluetoothAdapter: BluetoothAdapter? = null
+    private val availableDevices: MutableList<DeviceInfo> = mutableListOf()
+    private val pairedDevices: ArrayList<DeviceInfo> = arrayListOf()
+    private lateinit var availableAdapter: LockAdapter
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -60,8 +63,10 @@ class ScanLockWithBLTFragment : Fragment() {
                 Log.d(TAG, "setupBinding: BT adapter = $bluetoothAdapter")
                 val filter = IntentFilter(BluetoothDevice.ACTION_FOUND)
                 requireActivity().registerReceiver(findDeviceReceiver, filter)
-                checkScanDevices()
+                scanDevices()
             }
+            availableAdapter = LockAdapter(availableDevices)
+            rvAvailableDevices.adapter = availableAdapter
         }
     }
 
@@ -71,15 +76,12 @@ class ScanLockWithBLTFragment : Fragment() {
                 requireActivity(),
                 Manifest.permission.BLUETOOTH_CONNECT
             ) == PackageManager.PERMISSION_GRANTED
+            Log.d(TAG, "requestTurnOnBT: SDK > S bluetoothConnect = $bluetoothConnect")
             if (bluetoothConnect) {
-                //TODO: check later if need request on BT
-                bluetoothAdapter?.enable()
-//                val enableBtIntent = Intent(BluetoothAdapter.ACTION_REQUEST_ENABLE)
-//                requestBluetooth.launch(enableBtIntent)
+                turnOnBT()
             } else {
-                requestBluetoothPermissions.launch(arrayOf(Manifest.permission.BLUETOOTH_CONNECT))
+                requestBtConnectPermission.launch(Manifest.permission.BLUETOOTH_CONNECT)
             }
-
         } else {
             //API level 30 and below
             val enableBtIntent = Intent(BluetoothAdapter.ACTION_REQUEST_ENABLE)
@@ -87,9 +89,21 @@ class ScanLockWithBLTFragment : Fragment() {
         }
     }
 
-    private fun checkScanDevices() {
+    private val requestBtConnectPermission =
+        registerForActivityResult(ActivityResultContracts.RequestPermission()) { isGranted ->
+            if (isGranted) {
+                turnOnBT()
+            }
+        }
+
+    private fun turnOnBT() {
+        val enableBtIntent = Intent(BluetoothAdapter.ACTION_REQUEST_ENABLE)
+        requestBluetooth.launch(enableBtIntent)
+    }
+
+    private fun scanDevices() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
-            checkAndRequestPermission()
+            checkBtScanPermission()
         } else {
             val location = ContextCompat.checkSelfPermission(
                 requireActivity(),
@@ -103,28 +117,14 @@ class ScanLockWithBLTFragment : Fragment() {
         }
     }
 
-    private fun checkAndRequestPermission() {
+    private fun checkBtScanPermission() {
         activity?.let {
             val bluetoothScan =
                 ContextCompat.checkSelfPermission(
                     requireActivity(),
                     Manifest.permission.BLUETOOTH_SCAN
                 ) == PackageManager.PERMISSION_GRANTED
-            val bluetoothConnect = ContextCompat.checkSelfPermission(
-                requireActivity(),
-                Manifest.permission.BLUETOOTH_CONNECT
-            ) == PackageManager.PERMISSION_GRANTED
-            val location = ContextCompat.checkSelfPermission(
-                requireActivity(),
-                Manifest.permission.ACCESS_FINE_LOCATION
-            ) == PackageManager.PERMISSION_GRANTED
-
-            Log.d(
-                TAG,
-                "checkAndRequestPermission: scan = $bluetoothScan, connect = $bluetoothConnect, location = $location"
-            )
-
-            if (bluetoothScan && bluetoothConnect && location) {
+            if (bluetoothScan) {
                 Log.d(TAG, "checkAndRequestPermission:  adapter = $bluetoothAdapter")
                 bluetoothAdapter?.startDiscovery()
             }
@@ -132,18 +132,10 @@ class ScanLockWithBLTFragment : Fragment() {
             if (!bluetoothScan) {
                 listPermissionNeeded.add(Manifest.permission.BLUETOOTH_SCAN)
             }
-            if (!bluetoothConnect) {
-                listPermissionNeeded.add(Manifest.permission.BLUETOOTH_CONNECT)
-            }
-            if (!bluetoothConnect) {
-                listPermissionNeeded.add(Manifest.permission.ACCESS_FINE_LOCATION)
-            }
             if (listPermissionNeeded.isNotEmpty()) {
                 requestBluetoothPermissions.launch(
                     arrayOf(
-                        Manifest.permission.BLUETOOTH_SCAN,
-                        Manifest.permission.BLUETOOTH_CONNECT,
-                        Manifest.permission.ACCESS_FINE_LOCATION
+                        Manifest.permission.BLUETOOTH_SCAN
                     )
                 )
             }
@@ -159,8 +151,7 @@ class ScanLockWithBLTFragment : Fragment() {
             val data = permissions.containsValue(false)
             Log.d(TAG, "data:$data ")
             if (!permissions.containsValue(false)) {
-                Log.d(TAG, "bluetoothAdapter: $bluetoothAdapter ")
-                bluetoothAdapter?.enable()
+                Log.d(TAG, "bluetoothAdapter: $bluetoothAdapter -- startDiscovery ")
                 bluetoothAdapter?.startDiscovery()
             }
         }
@@ -194,16 +185,13 @@ class ScanLockWithBLTFragment : Fragment() {
                 BluetoothDevice.ACTION_FOUND -> {
                     val device: BluetoothDevice? =
                         intent.getParcelableExtra(BluetoothDevice.EXTRA_DEVICE)
-                    if (device != null) {
-                        val deviceName = device.name
-                        val deviceId = device.uuids
-                        val type = device.type
-                        val deviceAddress = device.address  // MAC address
-                        Log.d(
-                            TAG,
-                            "onReceive: deviceName = $deviceName, deviceId = $deviceId," +
-                                    " type = $type, deviceAddress= $deviceAddress"
-                        )
+                    if (device?.name != null) {
+                        val deviceInfo = DeviceInfo(device.name, device.type, device.address)
+                        if (!availableDevices.contains(deviceInfo)) {
+                            availableDevices.add(deviceInfo)
+                            availableAdapter.notifyItemInserted(availableDevices.size - 1)
+                            Log.d(TAG, "onReceive: $availableDevices")
+                        }
                     }
                 }
             }

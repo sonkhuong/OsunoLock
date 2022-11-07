@@ -6,8 +6,9 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.dagoras.osunolock.R
+import com.dagoras.osunolock.models.DeviceInfo
 
-class LockAdapter(private val dataSet: Array<String>) :
+class LockAdapter(private val dataSet: List<DeviceInfo>) :
     RecyclerView.Adapter<LockAdapter.ViewHolder>() {
 
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
@@ -26,7 +27,7 @@ class LockAdapter(private val dataSet: Array<String>) :
     }
 
     override fun onBindViewHolder(viewHolder: ViewHolder, position: Int) {
-        viewHolder.textView.text = dataSet[position]
+        viewHolder.textView.text = dataSet[position].name
         viewHolder.textView.setOnClickListener {
         }
     }
