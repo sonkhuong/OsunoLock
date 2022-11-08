@@ -32,6 +32,7 @@ class ListManagerLockFragment : Fragment() {
     }
 
     private fun setupBinding() {
+//        val listMyLock = MockupForDemo.listMyLock
         val listMyLock = arrayListOf<Manager>()
         if (listMyLock.size == 0) {
             navigateToScanLock()
