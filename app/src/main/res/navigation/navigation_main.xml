@@ -187,5 +187,8 @@
         <action
             android:id="@+id/action_listManagerLockFragment_to_managerScanLockFragment"
             app:destination="@id/managerScanLockFragment" />
+        <action
+            android:id="@+id/action_listManagerLockFragment_to_managerLockFragment"
+            app:destination="@id/managerLockFragment" />
     </fragment>
 </navigation>

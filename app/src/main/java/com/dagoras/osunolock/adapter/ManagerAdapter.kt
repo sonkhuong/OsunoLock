@@ -6,7 +6,6 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.dagoras.osunolock.databinding.ItemManagerBinding
-import com.dagoras.osunolock.list_manager.ListManagerLockFragment
 import com.dagoras.osunolock.list_manager.ListManagerLockFragmentDirections
 import com.dagoras.osunolock.models.Manager
 
@@ -19,23 +18,22 @@ class ManagerAdapter(private val fragment: Fragment, private val list: ArrayList
         return ViewHolder(binding)
     }
 
-    // Get size of recyclerview
     override fun getItemCount(): Int = list.size
 
-    // Bind item
     override fun onBindViewHolder(holder: ViewHolder, position: Int) = holder.bind(list[position])
 
     inner class ViewHolder(private val binding: ItemManagerBinding) :
         RecyclerView.ViewHolder(binding.root) {
         fun bind(item: Manager) {
             with(binding) {
-                // Config properties item of recyclerview
                 itemTitle.text = item.name
                 itemStatus.text = if (item.status == 0) "Out of date" else "Activate"
                 itemContent.text = item.content
+
                 itemView.setOnClickListener {
-                    navigateToAnotherScreen(fragment, 1)
+                    navigateToManagerLock(fragment, 0)
                 }
+
                 itemRemove.setOnClickListener {
 
                 }
@@ -43,13 +41,9 @@ class ManagerAdapter(private val fragment: Fragment, private val list: ArrayList
         }
     }
 
-    private fun navigateToAnotherScreen(fragment: Fragment, target: Int) {
-        when (fragment) {
-            ListManagerLockFragment() -> {
-                val action =
-                    ListManagerLockFragmentDirections.actionListManagerLockFragmentToManagerScanLockFragment()
-                fragment.findNavController().navigate(action)
-            }
-        }
+    private fun navigateToManagerLock(fragment: Fragment, position: Int) {
+        val action =
+            ListManagerLockFragmentDirections.actionListManagerLockFragmentToManagerLockFragment()
+        fragment.findNavController().navigate(action)
     }
 }

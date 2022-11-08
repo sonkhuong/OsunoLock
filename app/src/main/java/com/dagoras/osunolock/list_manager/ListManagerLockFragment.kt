@@ -5,10 +5,12 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.dagoras.osunolock.MockupForDemo
 import com.dagoras.osunolock.adapter.ManagerAdapter
 import com.dagoras.osunolock.databinding.FragmentListManagerLockBinding
+import com.dagoras.osunolock.models.Manager
 
 class ListManagerLockFragment : Fragment() {
 
@@ -30,12 +32,21 @@ class ListManagerLockFragment : Fragment() {
     }
 
     private fun setupBinding() {
-        val listMyLock = MockupForDemo.listMyLock
+        val listMyLock = arrayListOf<Manager>()
+        if (listMyLock.size == 0) {
+            navigateToScanLock()
+        }
         adapter = ManagerAdapter(this, listMyLock)
         with(binding) {
             recyclerMyLock.layoutManager =
                 LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
             recyclerMyLock.adapter = adapter
         }
+    }
+
+    private fun navigateToScanLock() {
+        val action =
+            ListManagerLockFragmentDirections.actionListManagerLockFragmentToManagerScanLockFragment()
+        findNavController().navigate(action)
     }
 }
