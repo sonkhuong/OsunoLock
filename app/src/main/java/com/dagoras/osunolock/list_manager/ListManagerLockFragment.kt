@@ -7,13 +7,13 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.dagoras.osunolock.MockupForDemo
-import com.dagoras.osunolock.adapter.MyLockAdapter
+import com.dagoras.osunolock.adapter.ManagerAdapter
 import com.dagoras.osunolock.databinding.FragmentListManagerLockBinding
 
 class ListManagerLockFragment : Fragment() {
 
     private lateinit var binding: FragmentListManagerLockBinding
-    private lateinit var adapter: MyLockAdapter
+    private lateinit var adapter: ManagerAdapter
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -31,7 +31,7 @@ class ListManagerLockFragment : Fragment() {
 
     private fun setupBinding() {
         val listMyLock = MockupForDemo.listMyLock
-        adapter = MyLockAdapter(listMyLock)
+        adapter = ManagerAdapter(this, listMyLock)
         with(binding) {
             recyclerMyLock.layoutManager =
                 LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)

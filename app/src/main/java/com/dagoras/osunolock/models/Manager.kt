@@ -1,4 +1,3 @@
 package com.dagoras.osunolock.models
 
-class Manager {
-}
+class Manager(val name: String, val status: Int, val content: String)
