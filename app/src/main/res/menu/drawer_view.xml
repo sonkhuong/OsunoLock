@@ -22,7 +22,7 @@
             android:icon="@drawable/ic_setting"
             android:title="@string/menu_setting" />
         <item
-            android:id="@+id/nav_cowork"
+            android:id="@+id/nav_info"
             android:icon="@drawable/ic_group_work"
             android:title="@string/menu_work_with" />
     </group>

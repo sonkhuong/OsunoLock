@@ -11,7 +11,7 @@ import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupWithNavController
 import com.dagoras.osunolock.databinding.ActivityMainBinding
-import com.dagoras.osunolock.scan_lock.fragment.ManagerScanLockFragmentDirections
+import com.dagoras.osunolock.list_manager.fragment.ListManagerLockFragmentDirections
 import com.google.android.material.navigation.NavigationView
 
 class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
@@ -37,13 +37,30 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
         val result = when (item.itemId) {
-            R.id.nav_setting -> {
+            R.id.nav_add_lock -> {
                 val action =
-                    ManagerScanLockFragmentDirections.actionManagerScanLockFragmentToSystemSettingFragment()
+                    ListManagerLockFragmentDirections.actionListManagerLockFragmentToManagerScanLockFragment()
                 navController.navigate(action)
                 true
             }
-            //TODO: add navigate to other screens
+            R.id.nav_gateway -> {
+                true
+            }
+            R.id.nav_message -> {
+                true
+            }
+            R.id.nav_service -> {
+                true
+            }
+            R.id.nav_setting -> {
+                val action =
+                    ListManagerLockFragmentDirections.actionListManagerLockFragmentToSystemSettingFragment2()
+                navController.navigate(action)
+                true
+            }
+            R.id.nav_info -> {
+                true
+            }
             else -> false
         }
         if (drawerLayout.isDrawerOpen(GravityCompat.START)) {
