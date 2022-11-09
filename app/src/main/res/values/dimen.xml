@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="margin_small_view">1dp</dimen>
+    <dimen name="margin_view">5dp</dimen>
+    <dimen name="shape_corners">16dp</dimen>
+    <dimen name="padding_horizontal">15dp</dimen>
+    <dimen name="padding_vertical_1">5dp</dimen>
+    <dimen name="padding_vertical_2">10dp</dimen>
+    <dimen name="size_days_of_week">40dp</dimen>
+
+    <dimen name="text_size_normal">15sp</dimen>
+    <dimen name="text_size_medium">20sp</dimen>
+    <dimen name="text_size_big">40sp</dimen>
+</resources>

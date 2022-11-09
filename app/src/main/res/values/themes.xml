@@ -20,9 +20,26 @@
     <style name="Widget.Button.Toggle" parent="android:Widget">
         <item name="android:background">@drawable/toggle_bg</item>
     </style>
+
     <style name="toggleButton">
         <item name="android:buttonStyleToggle">@style/Widget.Button.Toggle</item>
         <item name="android:textColor">@drawable/toggle_text_color</item>
+    </style>
+
+    <!-- TextView Style -->
+    <style name="label_text">
+        <item name="android:textSize">@dimen/text_size_normal</item>
+        <item name="android:fontFamily">@font/pro</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:background">@color/white</item>
+    </style>
+
+    <!-- EditText Style -->
+    <style name="edit_text">
+        <item name="android:textSize">@dimen/text_size_normal</item>
+        <item name="android:fontFamily">@font/pro</item>
+        <item name="android:textColor">@color/gray</item>
+        <item name="android:background">@color/white</item>
     </style>
 
 </resources>

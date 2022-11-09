@@ -17,44 +17,51 @@
 
             <TextView
                 android:id="@+id/lineReceiver"
+                style="@style/label_text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="3"
-                android:background="@color/white"
-                android:paddingVertical="10dp"
-                android:paddingStart="15dp"
-                android:text="Receiver"
-                android:textColor="@color/black" />
+                android:paddingVertical="@dimen/padding_vertical_2"
+                android:paddingStart="@dimen/padding_horizontal"
+                android:text="@string/address_title" />
 
             <EditText
                 android:id="@+id/editAccountReceiver"
+                style="@style/edit_text"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1" />
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="end|center_vertical"
+                android:hint="@string/address_receiver"
+                android:paddingEnd="@dimen/padding_horizontal" />
         </LinearLayout>
 
         <LinearLayout
             android:id="@+id/linearName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_small_view"
             android:orientation="horizontal">
 
             <TextView
                 android:id="@+id/lineName"
+                style="@style/label_text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="3"
-                android:background="@color/white"
-                android:paddingVertical="10dp"
-                android:paddingStart="15dp"
-                android:text="Name"
-                android:textColor="@color/black" />
+                android:paddingVertical="@dimen/padding_vertical_2"
+                android:paddingStart="@dimen/padding_horizontal"
+                android:text="@string/name_title" />
 
             <EditText
                 android:id="@+id/editName"
+                style="@style/edit_text"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1" />
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="end|center_vertical"
+                android:hint="@string/name_receiver"
+                android:paddingEnd="@dimen/padding_horizontal" />
         </LinearLayout>
 
         <LinearLayout
@@ -67,19 +74,28 @@
 
             <TextView
                 android:id="@+id/lineStartDate"
+                style="@style/label_text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@color/white"
-                android:paddingVertical="10dp"
-                android:paddingStart="15dp"
-                android:text="Days of the week"
-                android:textColor="@color/black" />
+                android:paddingVertical="@dimen/padding_vertical_2"
+                android:paddingStart="@dimen/padding_horizontal"
+                android:text="@string/days_of_weeks" />
 
             <include
                 android:id="@+id/customDayOfWeek"
                 layout="@layout/view_custom_days_of_week"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"></include>
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin_view" />
         </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_view"
+            android:drawableStart="@drawable/ic_baseline_info_24"
+            android:drawablePadding="@dimen/margin_view"
+            android:paddingHorizontal="@dimen/padding_horizontal"
+            android:text="@string/tip_cycle" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

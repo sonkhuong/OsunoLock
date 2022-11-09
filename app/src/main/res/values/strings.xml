@@ -4,19 +4,42 @@
     <!-- Remote Unlock -->
     <string name="remote_unlock_str">This Feature allows you to Unlock the Smart Lock Remotely via a Gateway. This Feature can ONLY be Turned ON or OFF via Bluetooth.</string>
 
-    <!--    Menu list-->
+    <!-- Menu list-->
     <string name="menu_add_lock">Thêm Khóa</string>
-    <string name="menu_gateway">Gateway</string>
-    <string name="menu_messages">Message</string>
-    <string name="menu_customer_service">Custom service</string>
-    <string name="menu_setting">Setting</string>
-    <string name="menu_work_with">Work with</string>
-    <string name="nav_open">Open</string>
-    <string name="nav_close">Close</string>
+    <string name="menu_gateway">Cổng kết nối</string>
+    <string name="menu_messages">Tin nhắn</string>
+    <string name="menu_customer_service">Dịch vụ khách hàng</string>
+    <string name="menu_setting">Cài đặt</string>
+    <string name="menu_work_with">Thông tin thêm</string>
+    <string name="nav_open">Mở</string>
+    <string name="nav_close">Đóng</string>
 
+    <!-- Settings -->
+    <string name="name_receiver">Tên người nhận</string>
+    <string name="address_receiver">Email/SĐT người nhận</string>
+    <string name="address_title">Địa chỉ</string>
+    <string name="days_of_weeks">Lặp lại các ngày trong tuần</string>
+    <string name="name_title">Tên</string>
+    <string name="start_date">Ngày bắt đầu</string>
+    <string name="start_date_value">2022-05-11 | 10:07</string>
+    <string name="end_date">Ngày kết thúc</string>
+    <string name="end_date_value">2022-05-11 | 11:07</string>
+    <string name="counting_time">Số lần mở</string>
+    <string name="tip_counting_time"><u>Gợi ý:</u> Số lần mở sẽ cài đặt số lượt mở tối đa mà người dùng được mở khóa, mỗi lần mở hệ thống sẽ tự động trừ đi 1 lượt. Khi về 0, thông tin người dùng sẽ bị xóa khỏi hệ thống.</string>
+    <string name="tip_period"><u>Gợi ý:</u> Kể từ ngày và giờ bắt đầu tới ngày và giờ kết thúc, người dùng sẽ được toàn quyền mở khóa. Khi hết thời gian, thông tin người dùng sẽ bị xóa khỏi hệ thống.</string>
+    <string name="tip_cycle"><u>Gợi ý:</u> Với mỗi ngày được chọn ở trên, người dùng sẽ được toàn quyền mở khóa, mỗi ngày không được chọn ở trên, người dùng sẽ bị vô hiệu hóa chức năng mở khóa.</string>
+
+    <!-- Days of the week -->
+    <string name="monday">2</string>
+    <string name="tuesday">3</string>
+    <string name="wednesday">4</string>
+    <string name="thursday">5</string>
+    <string name="friday">6</string>
+    <string name="saturday">7</string>
+    <string name="sunday">CN</string>
 
     <!-- Auto Lock -->
-    <string name="auto_lock_str">The lock will lock automatically after the time is up. Please unlock it for one time first to make the setting available.</string>
+    <string name="auto_lock_str">Khóa mà bạn đang sử dụng sẽ tự động đóng sau khi hết thời gian đếm ngược. Đảm bảo rằng bạn sẽ mở khóa trước khi thời gian đếm ngược kết thúc.</string>
 
     <!-- Tamper Alert -->
     <string name="tamper_alert_str">By turning on, you enable the TAMPER alert.</string>
