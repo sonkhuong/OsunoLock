@@ -25,6 +25,9 @@
     <string name="end_date">Ngày kết thúc</string>
     <string name="end_date_value">2022-05-11 | 11:07</string>
     <string name="counting_time">Số lần mở</string>
+    <string name="delay_time">Thời gian chờ</string>
+    <string name="delay_time_value">5s</string>
+    <string name="auto_lock">Tự động khóa</string>
     <string name="tip_counting_time"><u>Gợi ý:</u> Số lần mở sẽ cài đặt số lượt mở tối đa mà người dùng được mở khóa, mỗi lần mở hệ thống sẽ tự động trừ đi 1 lượt. Khi về 0, thông tin người dùng sẽ bị xóa khỏi hệ thống.</string>
     <string name="tip_period"><u>Gợi ý:</u> Kể từ ngày và giờ bắt đầu tới ngày và giờ kết thúc, người dùng sẽ được toàn quyền mở khóa. Khi hết thời gian, thông tin người dùng sẽ bị xóa khỏi hệ thống.</string>
     <string name="tip_cycle"><u>Gợi ý:</u> Với mỗi ngày được chọn ở trên, người dùng sẽ được toàn quyền mở khóa, mỗi ngày không được chọn ở trên, người dùng sẽ bị vô hiệu hóa chức năng mở khóa.</string>
@@ -39,7 +42,7 @@
     <string name="sunday">CN</string>
 
     <!-- Auto Lock -->
-    <string name="auto_lock_str">Khóa mà bạn đang sử dụng sẽ tự động đóng sau khi hết thời gian đếm ngược. Đảm bảo rằng bạn sẽ mở khóa trước khi thời gian đếm ngược kết thúc.</string>
+    <string name="tip_auto_lock">Khóa mà bạn đang sử dụng sẽ tự động đóng sau khi hết thời gian đếm ngược. Đảm bảo rằng bạn sẽ mở khóa trước khi thời gian đếm ngược kết thúc.</string>
 
     <!-- Tamper Alert -->
     <string name="tamper_alert_str">By turning on, you enable the TAMPER alert.</string>

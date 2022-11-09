@@ -95,6 +95,7 @@
             android:layout_marginTop="@dimen/margin_view"
             android:drawableStart="@drawable/ic_baseline_info_24"
             android:drawablePadding="@dimen/margin_view"
+            android:fontFamily="@font/pro_italic"
             android:paddingHorizontal="@dimen/padding_horizontal"
             android:text="@string/tip_cycle" />
     </LinearLayout>

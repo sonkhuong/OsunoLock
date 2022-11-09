@@ -1,76 +1,78 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/gray">
+    android:background="@color/low_gray_overlay">
 
     <LinearLayout
         android:id="@+id/linearAutoLock"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="@dimen/margin_view"
         android:background="@color/white"
         android:orientation="horizontal"
-        android:paddingVertical="10dp"
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
             android:id="@+id/lineAutoLock"
+            style="@style/label_text"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:paddingStart="15dp"
-            android:text="Auto Lock"
-            android:textColor="@color/black" />
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:paddingVertical="@dimen/padding_vertical_2"
+            android:paddingStart="@dimen/padding_horizontal"
+            android:text="@string/auto_lock" />
 
         <Switch
             android:id="@+id/switchAutoLock"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="5"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
             android:checked="true"
             android:longClickable="false"
-            android:paddingEnd="15dp"
-            tools:ignore="UseSwitchCompatOrMaterialXml" />
+            android:paddingEnd="@dimen/padding_horizontal" />
     </LinearLayout>
 
     <LinearLayout
         android:id="@+id/linearDelayTime"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="@dimen/margin_small_view"
         android:background="@color/white"
         android:orientation="horizontal"
-        android:paddingVertical="10dp"
         app:layout_constraintTop_toBottomOf="@id/linearAutoLock">
 
         <TextView
             android:id="@+id/lineDelayTime"
+            style="@style/label_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:paddingStart="15dp"
-            android:text="Delay Time"
-            android:textColor="@color/black" />
+            android:layout_weight="2"
+            android:paddingVertical="@dimen/padding_vertical_2"
+            android:paddingStart="@dimen/padding_horizontal"
+            android:text="@string/delay_time" />
 
         <TextView
             android:id="@+id/valueDelayTime"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_weight="1"
             android:drawableEnd="@drawable/ic_baseline_chevron_right_20"
-            android:gravity="end"
-            android:paddingEnd="15dp"
+            android:gravity="end|center_vertical"
+            android:paddingVertical="@dimen/padding_vertical_2"
+            android:paddingEnd="@dimen/padding_horizontal"
             android:text="5s" />
     </LinearLayout>
 
     <TextView
+        android:fontFamily="@font/pro_italic"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginHorizontal="15dp"
-        android:layout_marginTop="15dp"
-        android:text="@string/auto_lock_str"
+        android:layout_marginTop="@dimen/margin_view"
+        android:drawableStart="@drawable/ic_baseline_info_24"
+        android:drawablePadding="@dimen/margin_view"
+        android:paddingHorizontal="@dimen/padding_horizontal"
+        android:text="@string/tip_auto_lock"
         app:layout_constraintTop_toBottomOf="@id/linearDelayTime" />
 </androidx.constraintlayout.widget.ConstraintLayout>
