@@ -6,10 +6,10 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.dagoras.osunolock.R
-import com.dagoras.osunolock.models.DeviceInfo
+import com.dagoras.osunolock.model.DeviceInfo
 
-class LockAdapter(private val dataSet: List<DeviceInfo>) :
-    RecyclerView.Adapter<LockAdapter.ViewHolder>() {
+class LockScanAdapter(private val dataSet: List<DeviceInfo>) :
+    RecyclerView.Adapter<LockScanAdapter.ViewHolder>() {
 
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         val textView: TextView

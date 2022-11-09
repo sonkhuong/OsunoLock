@@ -6,11 +6,11 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.dagoras.osunolock.databinding.ItemManagerBinding
-import com.dagoras.osunolock.list_manager.ListManagerLockFragmentDirections
-import com.dagoras.osunolock.models.Manager
+import com.dagoras.osunolock.list_manager.fragment.ListManagerLockFragmentDirections
+import com.dagoras.osunolock.model.LockManager
 
-class ManagerAdapter(private val fragment: Fragment, private val list: ArrayList<Manager>) :
-    RecyclerView.Adapter<ManagerAdapter.ViewHolder>() {
+class LockManagerAdapter(private val fragment: Fragment, private val list: ArrayList<LockManager>) :
+    RecyclerView.Adapter<LockManagerAdapter.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val inflater = LayoutInflater.from(parent.context)
@@ -24,7 +24,7 @@ class ManagerAdapter(private val fragment: Fragment, private val list: ArrayList
 
     inner class ViewHolder(private val binding: ItemManagerBinding) :
         RecyclerView.ViewHolder(binding.root) {
-        fun bind(item: Manager) {
+        fun bind(item: LockManager) {
             with(binding) {
                 itemTitle.text = item.name
                 itemStatus.text = if (item.status == 0) "Out of date" else "Activate"

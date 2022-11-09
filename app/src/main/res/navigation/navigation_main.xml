@@ -182,7 +182,7 @@
         android:label="CreateNewItemFragmentManager" />
     <fragment
         android:id="@+id/listManagerLockFragment"
-        android:name="com.dagoras.osunolock.list_manager.ListManagerLockFragment"
+        android:name="com.dagoras.osunolock.list_manager.fragment.ListManagerLockFragment"
         android:label="ListManagerLockFragment" >
         <action
             android:id="@+id/action_listManagerLockFragment_to_managerScanLockFragment"
