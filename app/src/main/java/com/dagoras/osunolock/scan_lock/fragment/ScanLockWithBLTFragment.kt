@@ -22,7 +22,7 @@ import androidx.activity.result.contract.ActivityResultContracts
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
-import com.dagoras.osunolock.adapter.LockScanAdapter
+import com.dagoras.osunolock.adapter.DeviceScanAdapter
 import com.dagoras.osunolock.databinding.FragmentScanLockWithBltBinding
 import com.dagoras.osunolock.model.DeviceInfo
 
@@ -32,7 +32,7 @@ class ScanLockWithBLTFragment : Fragment() {
     private var bluetoothAdapter: BluetoothAdapter? = null
     private val availableDevices: MutableList<DeviceInfo> = mutableListOf()
     private val pairedDevices: ArrayList<DeviceInfo> = arrayListOf()
-    private lateinit var availableAdapter: LockScanAdapter
+    private lateinit var availableAdapter: DeviceScanAdapter
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -65,7 +65,7 @@ class ScanLockWithBLTFragment : Fragment() {
                 requireActivity().registerReceiver(findDeviceReceiver, filter)
                 scanDevices()
             }
-            availableAdapter = LockScanAdapter(availableDevices)
+            availableAdapter = DeviceScanAdapter(availableDevices)
             rvAvailableDevices.adapter = availableAdapter
         }
     }
