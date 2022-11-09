@@ -1,4 +1,4 @@
-package com.dagoras.osunolock.scanlock.fragment
+package com.dagoras.osunolock.scan_lock.fragment
 
 import android.Manifest
 import android.annotation.SuppressLint

@@ -1,4 +1,4 @@
-package com.dagoras.osunolock.scanlock.fragment
+package com.dagoras.osunolock.scan_lock.fragment
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -10,7 +10,6 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.dagoras.osunolock.R
 import com.dagoras.osunolock.databinding.FragmentManagerScanLockBinding
-import kotlinx.coroutines.*
 
 class ManagerScanLockFragment : Fragment() {
 

@@ -11,7 +11,7 @@ import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupWithNavController
 import com.dagoras.osunolock.databinding.ActivityMainBinding
-import com.dagoras.osunolock.scanlock.fragment.ManagerScanLockFragmentDirections
+import com.dagoras.osunolock.scan_lock.fragment.ManagerScanLockFragmentDirections
 import com.google.android.material.navigation.NavigationView
 
 class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {

@@ -5,7 +5,7 @@
     app:startDestination="@id/listManagerLockFragment">
     <fragment
         android:id="@+id/managerScanLockFragment"
-        android:name="com.dagoras.osunolock.scanlock.fragment.ManagerScanLockFragment"
+        android:name="com.dagoras.osunolock.scan_lock.fragment.ManagerScanLockFragment"
         android:label="ManagerScanLockFragment">
         <action
             android:id="@+id/action_managerScanLockFragment_to_fragmentScanLockWithBLT"
@@ -16,7 +16,7 @@
     </fragment>
     <fragment
         android:id="@+id/scanLockWithBLTFragment"
-        android:name="com.dagoras.osunolock.scanlock.fragment.ScanLockWithBLTFragment"
+        android:name="com.dagoras.osunolock.scan_lock.fragment.ScanLockWithBLTFragment"
         android:label="ScanLockWithBLTFragment">
         <action
             android:id="@+id/action_fragmentScanLockWithBLT_to_managerLockFragment"
