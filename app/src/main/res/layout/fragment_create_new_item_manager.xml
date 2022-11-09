@@ -10,11 +10,11 @@
         android:layout_height="wrap_content"
         android:background="@color/white"
         app:layout_constraintTop_toTopOf="parent"
-        app:tabIndicatorColor="@color/teal_700"
+        app:tabIndicatorColor="@color/mid_blue"
         app:tabInlineLabel="true"
-        app:tabSelectedTextColor="@color/teal_700"
+        app:tabSelectedTextColor="@color/mid_blue"
         app:tabTextAppearance="@style/TextAppearance.AppCompat.Small"
-        app:tabTextColor="@color/teal_700" />
+        app:tabTextColor="@color/mid_blue" />
 
     <androidx.viewpager2.widget.ViewPager2
         android:id="@+id/viewPagerCreateItemManager"

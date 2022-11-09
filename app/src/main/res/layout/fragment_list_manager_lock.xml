@@ -14,5 +14,5 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:itemCount="4"
         tools:layout_editor_absoluteX="15dp"
-        tools:listitem="@layout/item_my_lock" />
+        tools:listitem="@layout/item_device_scan" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/gray">
+    android:background="@color/low_gray_overlay">
 
     <LinearLayout
         android:id="@+id/linearLockSound"
@@ -12,17 +12,17 @@
         android:layout_height="wrap_content"
         android:background="@color/white"
         android:orientation="horizontal"
-        android:paddingVertical="10dp"
+        android:paddingVertical="@dimen/padding_vertical_2"
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
             android:id="@+id/lineLockSound"
+            style="@style/label_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:paddingStart="15dp"
-            android:text="Auto Lock"
-            android:textColor="@color/black" />
+            android:paddingStart="@dimen/padding_horizontal"
+            android:text="@string/lock_sound_title" />
 
         <Switch
             android:id="@+id/switchLockSound"
@@ -31,7 +31,7 @@
             android:layout_weight="5"
             android:checked="true"
             android:longClickable="false"
-            android:paddingEnd="15dp"
+            android:paddingEnd="@dimen/padding_horizontal"
             tools:ignore="UseSwitchCompatOrMaterialXml" />
     </LinearLayout>
 
@@ -39,10 +39,12 @@
         android:id="@+id/textToolsTip"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingVertical="10dp"
-        android:paddingStart="15dp"
-        android:text="By Turning ON, you will hear the sound from the lock"
-        android:textColor="@color/black"
+        android:drawableStart="@drawable/ic_baseline_info_24"
+        android:drawablePadding="@dimen/margin_view"
+        android:fontFamily="@font/pro_italic"
+        android:paddingVertical="@dimen/padding_vertical_2"
+        android:paddingStart="@dimen/padding_horizontal"
+        android:text="@string/tip_lock_sound"
         app:layout_constraintTop_toBottomOf="@id/linearLockSound" />
 
     <LinearLayout
@@ -55,55 +57,55 @@
 
         <TextView
             android:id="@+id/lineTitleSelectLockVolume"
+            style="@style/title_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:paddingVertical="10dp"
-            android:paddingStart="15dp"
-            android:text="Please select lock volume"
-            android:textColor="@color/black"
-            android:textStyle="bold" />
+            android:paddingStart="@dimen/padding_horizontal"
+            android:paddingTop="@dimen/padding_vertical_2"
+            android:text="@string/lock_volume_title" />
 
         <RadioGroup
+            android:id="@+id/radioVolume"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="15dp"
+            android:layout_marginStart="@dimen/padding_horizontal"
             android:orientation="vertical">
 
             <RadioButton
                 android:id="@+id/radioLow"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Low"
-                android:textStyle="bold" />
+                android:fontFamily="@font/pro"
+                android:text="@string/volume_very_low" />
 
             <RadioButton
                 android:id="@+id/radioMediumLow"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Medium Low"
-                android:textStyle="bold" />
+                android:fontFamily="@font/pro"
+                android:text="@string/volume_low" />
 
             <RadioButton
                 android:id="@+id/radioMedium"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Medium"
-                android:textStyle="bold" />
+                android:fontFamily="@font/pro"
+                android:text="@string/volume_medium" />
 
             <RadioButton
                 android:id="@+id/radioMediumHigh"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Medium High"
-                android:textStyle="bold" />
+                android:fontFamily="@font/pro"
+                android:text="@string/volume_high" />
 
             <RadioButton
                 android:id="@+id/radioHigh"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="High"
-                android:textStyle="bold" />
+                android:fontFamily="@font/pro"
+                android:text="@string/volume_very_high" />
         </RadioGroup>
     </LinearLayout>
 
@@ -111,12 +113,13 @@
         android:id="@+id/buttonSave"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginHorizontal="15dp"
-        android:layout_marginTop="15dp"
+        android:layout_marginHorizontal="@dimen/padding_horizontal"
+        android:layout_marginTop="@dimen/padding_horizontal"
         android:background="@drawable/bg_button_shape_white_shadow_gray"
+        android:fontFamily="@font/compact"
         android:gravity="center"
-        android:padding="10dp"
-        android:text="Save"
-        android:textStyle="bold"
+        android:padding="@dimen/padding_vertical_2"
+        android:text="@string/button_save_2"
+        android:textColor="@color/mid_blue"
         app:layout_constraintTop_toBottomOf="@id/linearSelectLockVolume" />
 </androidx.constraintlayout.widget.ConstraintLayout>

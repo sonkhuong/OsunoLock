@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/layout_signup"
+    android:id="@+id/layout_login"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/low_gray_overlay"
     android:visibility="visible">
 
     <ImageView
@@ -11,97 +12,131 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:src="@drawable/logo"
-        app:layout_constraintBottom_toTopOf="@id/linearUserName"
+        app:layout_constraintBottom_toTopOf="@id/viewSignUp"
         app:layout_constraintHeight_percent="0.2"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <LinearLayout
-        android:id="@+id/linearUserName"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/viewSignUp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginHorizontal="20dp"
-        android:layout_marginBottom="5dp"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toTopOf="@id/linearPassword">
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="3"
-            android:text="User name:"
-            app:layout_constraintTop_toBottomOf="@id/logoOsuno" />
-
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/linearPassword"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="20dp"
-        android:layout_marginBottom="5dp"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toTopOf="@id/linearRetypePassword">
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="3"
-            android:text="Password:"
-            app:layout_constraintTop_toBottomOf="@id/logoOsuno" />
-
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/linearRetypePassword"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="20dp"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toTopOf="@id/buttonSignUp">
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="3"
-            android:text="RPassword:"
-            app:layout_constraintTop_toBottomOf="@id/logoOsuno" />
-
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1" />
-    </LinearLayout>
-
-    <TextView
-        android:id="@+id/buttonSignUp"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:layout_marginBottom="200dp"
-        android:background="@drawable/bg_button_shape_red"
-        android:gravity="center"
-        android:paddingVertical="5dp"
-        android:text="Sign Up"
-        android:textColor="@color/white"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@id/urlLoginAccount"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/linearPhoneNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/padding_horizontal"
+            android:layout_marginBottom="@dimen/margin_view"
+            android:background="@drawable/bg_white_login_field"
+            android:orientation="horizontal"
+            android:paddingVertical="@dimen/padding_vertical_2"
+            app:layout_constraintBottom_toTopOf="@id/linearPassword">
+
+            <TextView
+                style="@style/label_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:paddingStart="@dimen/padding_horizontal"
+                android:text="@string/phone_number_title"
+                app:layout_constraintTop_toBottomOf="@id/logoOsuno" />
+
+            <EditText
+                android:id="@+id/edtPhoneNumber"
+                style="@style/edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="@string/phone_number_value"
+                android:paddingStart="@dimen/padding_horizontal" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/padding_horizontal"
+            android:layout_marginBottom="@dimen/margin_view"
+            android:background="@drawable/bg_white_login_field"
+            android:orientation="horizontal"
+            android:paddingVertical="@dimen/padding_vertical_2"
+            app:layout_constraintBottom_toTopOf="@id/linearRetypePassword">
+
+            <TextView
+                style="@style/label_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:paddingStart="@dimen/padding_horizontal"
+                android:text="@string/password_title"
+                app:layout_constraintTop_toBottomOf="@id/logoOsuno" />
+
+            <EditText
+                android:id="@+id/edtPassword"
+                style="@style/edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="@string/password_value"
+                android:paddingStart="@dimen/padding_horizontal" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearRetypePassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/padding_horizontal"
+            android:layout_marginBottom="@dimen/margin_big_view"
+            android:background="@drawable/bg_white_login_field"
+            android:orientation="horizontal"
+            android:paddingVertical="@dimen/padding_vertical_2"
+            app:layout_constraintBottom_toTopOf="@id/buttonSignUp">
+
+            <TextView
+                style="@style/label_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:paddingStart="@dimen/padding_horizontal"
+                android:text="@string/retype_password_title" />
+
+            <EditText
+                android:id="@+id/edtRetypePassword"
+                style="@style/edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="@string/password_value"
+                android:paddingStart="@dimen/padding_horizontal" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/buttonSignUp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/padding_horizontal_2"
+            android:layout_marginTop="@dimen/margin_big_view"
+            android:layout_marginBottom="@dimen/margin_big_view"
+            android:background="@drawable/bg_button_shape_red"
+            android:fontFamily="@font/compact"
+            android:gravity="center"
+            android:paddingVertical="@dimen/padding_vertical_2"
+            android:text="@string/button_signup"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <TextView
-        android:id="@+id/urlLoginAccount"
+        android:id="@+id/urlSignupAccount"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="15dp"
-        android:text="Don't have an account?"
+        android:layout_marginBottom="@dimen/padding_horizontal"
+        android:fontFamily="@font/pro"
+        android:text="@string/already_have_account"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />

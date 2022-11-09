@@ -28,7 +28,7 @@
         app:layout_constraintTop_toBottomOf="@id/tvPaired"
         tools:itemCount="4"
         tools:layout_editor_absoluteX="15dp"
-        tools:listitem="@layout/item_lock" />
+        tools:listitem="@layout/item_device_scan" />
 
     <TextView
         android:id="@+id/tvAvailable"
@@ -49,6 +49,6 @@
         app:layout_constraintTop_toBottomOf="@id/tvAvailable"
         tools:itemCount="4"
         tools:layout_editor_absoluteX="15dp"
-        tools:listitem="@layout/item_lock" />
+        tools:listitem="@layout/item_device_scan" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

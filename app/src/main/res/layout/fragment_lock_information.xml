@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/gray">
+    android:background="@color/low_gray_overlay">
 
     <LinearLayout
         android:id="@+id/linearBasicInfo"
@@ -11,208 +11,179 @@
         android:layout_height="wrap_content"
         android:background="@color/white"
         android:orientation="horizontal"
-        android:paddingVertical="10dp"
+        android:paddingVertical="@dimen/padding_vertical_2"
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
             android:id="@+id/lineNumber"
+            style="@style/label_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="2"
-            android:paddingStart="15dp"
-            android:text="Lock Number"
-            android:textColor="@color/black" />
+            android:paddingStart="@dimen/padding_horizontal"
+            android:text="@string/lock_number_title" />
 
         <TextView
             android:id="@+id/textNumberValue"
+            style="@style/edit_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:gravity="end"
-            android:paddingEnd="15dp"
-            android:text="S31_ef8a97"
-            android:textColor="@color/black" />
+            android:paddingEnd="@dimen/padding_horizontal"
+            android:text="@string/lock_number_value" />
     </LinearLayout>
 
     <LinearLayout
         android:id="@+id/linearMacId"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="1dp"
+        android:layout_marginTop="@dimen/margin_small_view"
         android:background="@color/white"
         android:orientation="horizontal"
-        android:paddingVertical="10dp"
+        android:paddingVertical="@dimen/padding_vertical_2"
         app:layout_constraintTop_toBottomOf="@id/linearBasicInfo">
 
         <TextView
             android:id="@+id/lineMacId"
+            style="@style/label_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="2"
-            android:paddingStart="15dp"
-            android:text="MAC/ID"
-            android:textColor="@color/black" />
+            android:paddingStart="@dimen/padding_horizontal"
+            android:text="@string/mac_id_title" />
 
         <TextView
             android:id="@+id/textMacIdValue"
+            style="@style/edit_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:gravity="end"
-            android:paddingEnd="15dp"
-            android:text="50:F9:B1:97:8A:EF/5357835"
-            android:textColor="@color/black" />
+            android:paddingEnd="@dimen/padding_horizontal"
+            android:text="@string/mac_id_value" />
     </LinearLayout>
 
     <LinearLayout
         android:id="@+id/linearBattery"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="1dp"
+        android:layout_marginTop="@dimen/margin_small_view"
         android:background="@color/white"
         android:orientation="horizontal"
-        android:paddingVertical="10dp"
+        android:paddingVertical="@dimen/padding_vertical_2"
         app:layout_constraintTop_toBottomOf="@id/linearMacId">
 
         <TextView
             android:id="@+id/lineBattery"
+            style="@style/label_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="2"
-            android:paddingStart="15dp"
-            android:text="Battery"
-            android:textColor="@color/black" />
+            android:paddingStart="@dimen/padding_horizontal"
+            android:text="@string/battery_title" />
 
         <TextView
             android:id="@+id/textBatteryValue"
+            style="@style/edit_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_weight="1"
-            android:background="@color/white"
-            android:drawableEnd="@drawable/ic_baseline_chevron_right_20"
             android:gravity="end"
-            android:paddingEnd="5dp"
-            android:text="65%" />
+            android:paddingEnd="@dimen/padding_horizontal"
+            android:text="@string/battery_value" />
     </LinearLayout>
 
     <LinearLayout
         android:id="@+id/linearValidity"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="1dp"
+        android:layout_marginTop="@dimen/margin_small_view"
         android:background="@color/white"
         android:orientation="horizontal"
-        android:paddingVertical="10dp"
+        android:paddingVertical="@dimen/padding_vertical_2"
         app:layout_constraintTop_toBottomOf="@id/linearBattery">
 
         <TextView
             android:id="@+id/lineValidity"
+            style="@style/label_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="2"
-            android:paddingStart="15dp"
-            android:text="Validity Period"
-            android:textColor="@color/black" />
+            android:paddingStart="@dimen/padding_horizontal"
+            android:text="@string/validity_title" />
 
         <TextView
             android:id="@+id/valueValidity"
+            style="@style/edit_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:gravity="end"
-            android:paddingEnd="15dp"
-            android:text="Permanent"
-            android:textColor="@color/black" />
+            android:paddingEnd="@dimen/padding_horizontal"
+            android:text="@string/validity_value" />
     </LinearLayout>
 
     <LinearLayout
         android:id="@+id/linearName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="@dimen/margin_view"
         android:background="@color/white"
         android:orientation="horizontal"
-        android:paddingVertical="10dp"
+        android:paddingVertical="@dimen/padding_vertical_2"
         app:layout_constraintTop_toBottomOf="@id/linearValidity">
 
         <TextView
             android:id="@+id/lineName"
+            style="@style/label_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="2"
-            android:paddingStart="15dp"
-            android:text="Name"
-            android:textColor="@color/black" />
+            android:paddingStart="@dimen/padding_horizontal"
+            android:text="@string/lock_name_title" />
 
         <TextView
             android:id="@+id/valueName"
+            style="@style/edit_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:drawableEnd="@drawable/ic_baseline_chevron_right_20"
             android:gravity="end"
-            android:paddingEnd="15dp"
-            android:text="MyLock" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/linearGroup"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="1dp"
-        android:background="@color/white"
-        android:orientation="horizontal"
-        android:paddingVertical="10dp"
-        app:layout_constraintTop_toBottomOf="@id/linearName">
-
-        <TextView
-            android:id="@+id/lineGroup"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="2"
-            android:paddingStart="15dp"
-            android:text="Lock Group"
-            android:textColor="@color/black" />
-
-        <TextView
-            android:id="@+id/valueGroup"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:drawableEnd="@drawable/ic_baseline_chevron_right_20"
-            android:gravity="end"
-            android:paddingEnd="15dp"
-            android:text="UnGrouped" />
+            android:paddingEnd="@dimen/padding_horizontal"
+            android:text="@string/lock_name_value" />
     </LinearLayout>
 
     <LinearLayout
         android:id="@+id/linearAdminPasscode"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="1dp"
+        android:layout_marginTop="@dimen/margin_small_view"
         android:background="@color/white"
         android:orientation="horizontal"
-        android:paddingVertical="10dp"
-        app:layout_constraintTop_toBottomOf="@id/linearGroup">
+        android:paddingVertical="@dimen/padding_vertical_2"
+        app:layout_constraintTop_toBottomOf="@id/linearName">
 
         <TextView
             android:id="@+id/lineAdminPasscode"
+            style="@style/label_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="2"
-            android:paddingStart="15dp"
-            android:text="Admin Passcode"
-            android:textColor="@color/black" />
+            android:paddingStart="@dimen/padding_horizontal"
+            android:text="@string/lock_admin_passcode" />
 
         <TextView
             android:id="@+id/valueAdminPasscode"
+            style="@style/edit_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:drawableEnd="@drawable/ic_baseline_chevron_right_20"
             android:gravity="end"
-            android:paddingEnd="15dp" />
+            android:paddingEnd="@dimen/padding_horizontal" />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

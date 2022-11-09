@@ -65,9 +65,6 @@
             android:id="@+id/action_settingsFragment_to_autoLockFragment"
             app:destination="@id/autoLockFragment" />
         <action
-            android:id="@+id/action_settingsFragment_to_diagnosisFragment"
-            app:destination="@id/diagnosisFragment" />
-        <action
             android:id="@+id/action_settingsFragment_to_lockSoundFragment"
             app:destination="@id/lockSoundFragment" />
         <action
@@ -100,10 +97,6 @@
         android:id="@+id/autoLockFragment"
         android:name="com.dagoras.osunolock.sub_manager_lock.fragment.settings.auto_lock.AutoLockFragment"
         android:label="AutoLockFragment" />
-    <fragment
-        android:id="@+id/diagnosisFragment"
-        android:name="com.dagoras.osunolock.sub_manager_lock.fragment.settings.diagnosis.DiagnosisFragment"
-        android:label="DiagnosisFragment" />
     <fragment
         android:id="@+id/lockSoundFragment"
         android:name="com.dagoras.osunolock.sub_manager_lock.fragment.settings.lock_sound.LockSoundFragment"

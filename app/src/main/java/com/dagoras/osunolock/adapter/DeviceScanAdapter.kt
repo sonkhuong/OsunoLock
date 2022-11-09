@@ -21,7 +21,7 @@ class DeviceScanAdapter(private val dataSet: List<DeviceInfo>) :
 
     override fun onCreateViewHolder(viewGroup: ViewGroup, viewType: Int): ViewHolder {
         val view = LayoutInflater.from(viewGroup.context)
-            .inflate(R.layout.item_lock, viewGroup, false)
+            .inflate(R.layout.item_device_scan, viewGroup, false)
 
         return ViewHolder(view)
     }

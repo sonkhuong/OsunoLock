@@ -1,7 +1,23 @@
 <resources>
     <string name="app_name">OsunoLock</string>
 
-    <!-- Remote Unlock -->
+    <!-- Another -->
+    <string name="button_save_1">Lưu giá trị</string>
+    <string name="button_save_2">Lưu cài đặt</string>
+
+    <!-- Login/Sign up -->
+    <string name="phone_number_title">SĐT</string>
+    <string name="phone_number_value">Số điện thoại</string>
+    <string name="password_title">Mật khẩu</string>
+    <string name="retype_password_title">Nhập lại</string>
+    <string name="password_value">******</string>
+    <string name="button_login">Đăng nhập</string>
+    <string name="button_signup">Đăng ký</string>
+    <string name="url_forgot_password">Quên mật khẩu?</string>
+    <string name="do_not_have_account">Bạn chưa có tài khoản? <u>Đăng ký ngay.</u></string>
+    <string name="already_have_account">Bạn đã có tài khoản? <u>Đăng nhập.</u></string>
+
+    <!-- Remote unlock -->
     <string name="remote_unlock_str">This Feature allows you to Unlock the Smart Lock Remotely via a Gateway. This Feature can ONLY be Turned ON or OFF via Bluetooth.</string>
 
     <!-- Menu list-->
@@ -13,6 +29,29 @@
     <string name="menu_work_with">Thông tin thêm</string>
     <string name="nav_open">Mở</string>
     <string name="nav_close">Đóng</string>
+
+    <!-- Lock info -->
+    <string name="lock_number_title">Mã của khóa</string>
+    <string name="lock_number_value">S31_ef8a97</string>
+    <string name="mac_id_title">MAC/ID</string>
+    <string name="mac_id_value">50:F9:B1:97:8A:EF/5357835</string>
+    <string name="battery_title">Pin</string>
+    <string name="battery_value">65%</string>
+    <string name="validity_title">Vòng đời quản lý</string>
+    <string name="validity_value">Vĩnh viễn</string>
+    <string name="lock_name_title">Tên khóa</string>
+    <string name="lock_name_value">SK Lock</string>
+    <string name="lock_admin_passcode">Mã của quản lý</string>
+
+    <!-- Lock sound -->
+    <string name="lock_sound_title">Âm thanh khóa</string>
+    <string name="lock_volume_title">Chọn âm lượng khóa</string>
+    <string name="volume_very_low">Rất nhỏ</string>
+    <string name="volume_low">Nhỏ</string>
+    <string name="volume_medium">Vừa phải</string>
+    <string name="volume_high">Lớn</string>
+    <string name="volume_very_high">Rất lớn</string>
+    <string name="tip_lock_sound">Bằng việt bật tắt âm thanh khóa, bạn có thể nghe hoặc tắt tiếng từ khóa.</string>
 
     <!-- Settings -->
     <string name="name_receiver">Tên người nhận</string>
@@ -49,9 +88,6 @@
 
     <!-- Reset Button -->
     <string name="reset_button_str">By turning on, you can pair the lock again by long pressing the RESET button.\nBy turning off, the RESET button is disabled.</string>
-
-    <!-- Diagnosis -->
-    <string name="diagnosis_str">Diagnostics will Upload the Config Data to our Servers for Root Cause Analysis of the problem. Please execute within 2 meters of the Lock.</string>
 
     <!-- Upload Data -->
     <string name="upload_data_str">Upload data from lock to server. It may take several minutes.</string>
