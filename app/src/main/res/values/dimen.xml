@@ -4,6 +4,7 @@
     <dimen name="margin_small_view">1dp</dimen>
     <dimen name="margin_view">5dp</dimen>
     <dimen name="margin_big_view">10dp</dimen>
+    <dimen name="margin_big_view_2">15dp</dimen>
     <dimen name="shape_corners">16dp</dimen>
     <dimen name="padding_horizontal">15dp</dimen>
     <dimen name="padding_horizontal_2">45dp</dimen>

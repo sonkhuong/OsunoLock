@@ -5,18 +5,18 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import com.dagoras.osunolock.databinding.FragmentTimesBinding
+import com.dagoras.osunolock.databinding.FragmentTimeBinding
 
 class TimesFragment : Fragment() {
 
-    private lateinit var binding: FragmentTimesBinding
+    private lateinit var binding: FragmentTimeBinding
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        binding = FragmentTimesBinding.inflate(inflater, container, false)
+        binding = FragmentTimeBinding.inflate(inflater, container, false)
         return binding.root
     }
 

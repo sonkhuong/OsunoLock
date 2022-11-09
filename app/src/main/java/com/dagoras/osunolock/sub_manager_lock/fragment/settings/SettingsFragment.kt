@@ -44,10 +44,6 @@ class SettingsFragment : Fragment() {
                 navigateToTamperAlert()
             }
 
-            lineDiagnosis.setOnClickListener {
-                navigateToDiagnosis()
-            }
-
             lineResetButton.setOnClickListener {
                 navigateToResetButton()
             }
@@ -79,11 +75,6 @@ class SettingsFragment : Fragment() {
 
     private fun navigateToAutoLock() {
         val action = SettingsFragmentDirections.actionSettingsFragmentToAutoLockFragment()
-        findNavController().navigate(action)
-    }
-
-    private fun navigateToDiagnosis() {
-        val action = SettingsFragmentDirections.actionSettingsFragmentToDiagnosisFragment()
         findNavController().navigate(action)
     }
 
