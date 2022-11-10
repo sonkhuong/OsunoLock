@@ -4,6 +4,7 @@
     <!-- Another -->
     <string name="button_save_1">Lưu giá trị</string>
     <string name="button_save_2">Lưu cài đặt</string>
+    <string name="button_add_item">Thêm mới+</string>
 
     <!-- Login/Sign up -->
     <string name="phone_number_title">SĐT</string>
@@ -16,6 +17,22 @@
     <string name="url_forgot_password">Quên mật khẩu?</string>
     <string name="do_not_have_account">Bạn chưa có tài khoản? <u>Đăng ký ngay.</u></string>
     <string name="already_have_account">Bạn đã có tài khoản? <u>Đăng nhập.</u></string>
+
+    <!-- Manager Lock -->
+    <string name="card_label">Thẻ từ</string>
+    <string name="remote_label">Điều khiển</string>
+    <string name="ekeys_label">EKeys</string>
+    <string name="passcode_label">Mật khẩu</string>
+    <string name="admin_label">Quyền quản lý</string>
+    <string name="record_label">Lịch sử</string>
+    <string name="finger_label">Vân tay</string>
+    <string name="setting_label">Cài đặt</string>
+
+    <!-- Scan Lock -->
+    <string name="smart_key_label">Khóa cửa</string>
+    <string name="gate_key_label">Khóa cổng</string>
+    <string name="scroll_key_label">Khóa cửa cuốn</string>
+    <string name="timer_key_label">Đồng hồ đếm ngược</string>
 
     <!-- Remote unlock -->
     <string name="remote_unlock_str">This Feature allows you to Unlock the Smart Lock Remotely via a Gateway. This Feature can ONLY be Turned ON or OFF via Bluetooth.</string>
