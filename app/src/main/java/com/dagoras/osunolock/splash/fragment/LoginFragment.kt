@@ -1,17 +1,22 @@
 package com.dagoras.osunolock.splash.fragment
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.view.animation.AnimationUtils
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
 import com.dagoras.osunolock.R
 import com.dagoras.osunolock.databinding.FragmentLoginBinding
+import com.dagoras.osunolock.model.Account
+import com.dagoras.osunolock.splash.viewmodel.LoginViewModel
 
 class LoginFragment : Fragment() {
 
+    private val viewModel: LoginViewModel by activityViewModels()
     private lateinit var binding: FragmentLoginBinding
 
     override fun onCreateView(
@@ -27,6 +32,14 @@ class LoginFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         setupBinding()
     }
+
+    private fun checkCreateAccount() {
+        viewModel.createNewAccount(Account(0, "0912", "123"))
+    }
+
+//    private fun checkListAccount() {
+//        Log.d("SizeACC", "${viewModel.listAccount.value?.size}")
+//    }
 
     private fun setupBinding() {
         with(binding) {
@@ -48,11 +61,13 @@ class LoginFragment : Fragment() {
             background.start()
 
             buttonLogin.setOnClickListener {
-                navigateToMainActivity()
+                checkCreateAccount()
+//                navigateToMainActivity()
             }
 
             urlSignupAccount.setOnClickListener {
-                navigateToSignUpFragment()
+//                checkListAccount()
+//                navigateToSignUpFragment()
             }
         }
     }

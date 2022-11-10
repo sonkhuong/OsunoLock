@@ -58,9 +58,6 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                 navController.navigate(action)
                 true
             }
-            R.id.nav_info -> {
-                true
-            }
             else -> false
         }
         if (drawerLayout.isDrawerOpen(GravityCompat.START)) {
