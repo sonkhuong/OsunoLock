@@ -7,15 +7,15 @@
     <TextView
         android:id="@+id/fakeToolbar"
         android:layout_width="match_parent"
-        android:layout_height="100dp"
+        android:layout_height="@dimen/toolbar_size"
         android:background="@drawable/bg_bottom_to_mid_blue"
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintToolbar"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:layout_marginHorizontal="30dp"
+        android:layout_height="@dimen/toolbar_size_1"
+        android:layout_marginHorizontal="@dimen/padding_horizontal_1"
         android:background="@drawable/bg_shape_bottom_to_top_blue"
         app:layout_constraintTop_toTopOf="@id/fakeToolbar">
 
@@ -23,24 +23,24 @@
             android:id="@+id/titleScan"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="15dp"
+            android:layout_marginBottom="@dimen/padding_horizontal"
+            android:fontFamily="@font/compact"
             android:gravity="center"
-            android:text="All Devices Of Osuno"
+            android:text="Scan all devices"
             android:textColor="@color/white"
-            android:textSize="20sp"
-            android:textStyle="bold"
+            android:textSize="@dimen/text_size_medium"
             app:layout_constraintBottom_toTopOf="@id/buttonScan" />
 
         <TextView
             android:id="@+id/buttonScan"
+            style="@style/label_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginHorizontal="74dp"
+            android:layout_marginHorizontal="@dimen/image_size"
             android:background="@drawable/bg_white_shape"
             android:gravity="center"
-            android:padding="10dp"
-            android:text="Scan All Devices"
-            android:textColor="@color/black"
+            android:padding="@dimen/padding_vertical_2"
+            android:text="Scan"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>

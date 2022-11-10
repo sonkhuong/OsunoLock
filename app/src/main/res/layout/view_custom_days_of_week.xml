@@ -5,7 +5,7 @@
     android:orientation="horizontal">
 
     <ToggleButton
-        android:id="@+id/tD"
+        android:id="@+id/monday"
         style="@style/toggleButton"
         android:layout_width="@dimen/size_days_of_week"
         android:layout_height="@dimen/size_days_of_week"
@@ -13,66 +13,73 @@
         android:layout_marginStart="@dimen/padding_horizontal"
         android:layout_marginEnd="@dimen/margin_view"
         android:background="@drawable/toggle_bg"
+        android:fontFamily="@font/compact"
         android:textOff="@string/monday"
         android:textOn="@string/monday" />
 
     <ToggleButton
-        android:id="@+id/tL"
+        android:id="@+id/tuesday"
         style="@style/toggleButton"
         android:layout_width="@dimen/size_days_of_week"
         android:layout_height="@dimen/size_days_of_week"
         android:layout_margin="@dimen/margin_view"
         android:background="@drawable/toggle_bg"
+        android:fontFamily="@font/compact"
         android:textOff="@string/tuesday"
         android:textOn="@string/tuesday" />
 
     <ToggleButton
-        android:id="@+id/tM"
+        android:id="@+id/wednesday"
         style="@style/toggleButton"
         android:layout_width="@dimen/size_days_of_week"
         android:layout_height="@dimen/size_days_of_week"
         android:layout_margin="@dimen/margin_view"
         android:background="@drawable/toggle_bg"
+        android:fontFamily="@font/compact"
         android:textOff="@string/wednesday"
         android:textOn="@string/wednesday" />
 
     <ToggleButton
-        android:id="@+id/tMi"
+        android:id="@+id/thursday"
         style="@style/toggleButton"
         android:layout_width="@dimen/size_days_of_week"
         android:layout_height="@dimen/size_days_of_week"
         android:layout_margin="@dimen/margin_view"
         android:background="@drawable/toggle_bg"
+        android:fontFamily="@font/compact"
         android:textOff="@string/thursday"
         android:textOn="@string/thursday" />
 
     <ToggleButton
-        android:id="@+id/tJ"
+        android:id="@+id/friday"
         style="@style/toggleButton"
         android:layout_width="@dimen/size_days_of_week"
         android:layout_height="@dimen/size_days_of_week"
         android:layout_margin="@dimen/margin_view"
         android:background="@drawable/toggle_bg"
+        android:fontFamily="@font/compact"
         android:textOff="@string/friday"
         android:textOn="@string/friday" />
 
     <ToggleButton
-        android:id="@+id/tV"
+        android:id="@+id/saturday"
         style="@style/toggleButton"
         android:layout_width="@dimen/size_days_of_week"
         android:layout_height="@dimen/size_days_of_week"
         android:layout_margin="@dimen/margin_view"
         android:background="@drawable/toggle_bg"
+        android:fontFamily="@font/compact"
         android:textOff="@string/saturday"
         android:textOn="@string/saturday" />
 
     <ToggleButton
-        android:id="@+id/tS"
+        android:id="@+id/sunday"
         style="@style/toggleButton"
         android:layout_width="@dimen/size_days_of_week"
         android:layout_height="@dimen/size_days_of_week"
         android:layout_margin="@dimen/margin_view"
         android:background="@drawable/toggle_bg"
+        android:fontFamily="@font/compact"
         android:textOff="@string/sunday"
         android:textOn="@string/sunday" />
 </LinearLayout>

@@ -7,34 +7,34 @@
     <TextView
         android:id="@+id/fakeToolbar"
         android:layout_width="match_parent"
-        android:layout_height="150dp"
+        android:layout_height="@dimen/toolbar_size"
         android:background="@drawable/bg_bottom_to_mid_blue"
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintToolbar"
         android:layout_width="match_parent"
-        android:layout_height="450dp"
-        android:layout_marginHorizontal="30dp"
+        android:layout_height="@dimen/toolbar_size_2"
+        android:layout_marginHorizontal="@dimen/padding_horizontal_1"
         android:background="@drawable/bg_shape_bottom_to_top_blue"
         app:layout_constraintTop_toTopOf="@id/fakeToolbar">
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="15dp"
+            android:layout_marginBottom="@dimen/padding_horizontal"
+            android:fontFamily="@font/compact"
             android:gravity="center"
             android:text="OSN - 3363"
             android:textColor="@color/white"
-            android:textSize="20sp"
-            android:textStyle="bold"
+            android:textSize="@dimen/text_size_medium"
             app:layout_constraintBottom_toTopOf="@id/buttonLock" />
 
         <ImageButton
             android:id="@+id/buttonLock"
-            android:layout_width="150dp"
-            android:layout_height="150dp"
-            android:layout_marginBottom="50dp"
+            android:layout_width="@dimen/lock_size"
+            android:layout_height="@dimen/lock_size"
+            android:layout_marginBottom="@dimen/image_size"
             android:background="@drawable/close_key"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -45,7 +45,8 @@
             android:id="@+id/urlTouchToUnlock"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="@dimen/padding_vertical_2"
+            android:fontFamily="@font/pro"
             android:gravity="center"
             android:text="Touch to unlock your Lock"
             android:textColor="@color/white"
@@ -54,9 +55,10 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"
+            android:layout_marginBottom="@dimen/padding_vertical_2"
             android:drawableTop="@drawable/battery"
-            android:drawablePadding="5dp"
+            android:drawablePadding="@dimen/margin_view"
+            android:fontFamily="@font/pro"
             android:gravity="center"
             android:text="65%"
             android:textColor="@color/white"
