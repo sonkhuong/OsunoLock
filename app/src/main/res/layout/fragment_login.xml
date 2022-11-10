@@ -4,7 +4,7 @@
     android:id="@+id/layout_login"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/low_gray_overlay"
+    android:background="@color/low_gray_overlay_1"
     android:visibility="visible">
 
     <ImageView
