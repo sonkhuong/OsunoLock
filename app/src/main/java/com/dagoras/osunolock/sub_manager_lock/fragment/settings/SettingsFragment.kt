@@ -65,9 +65,4 @@ class SettingsFragment : Fragment() {
         val action = SettingsFragmentDirections.actionSettingsFragmentToLockSoundFragment()
         findNavController().navigate(action)
     }
-
-    private fun navigateToUploadData() {
-        val action = SettingsFragmentDirections.actionSettingsFragmentToUploadDataFragment()
-        findNavController().navigate(action)
-    }
 }

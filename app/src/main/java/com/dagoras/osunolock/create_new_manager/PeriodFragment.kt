@@ -5,7 +5,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import com.dagoras.osunolock.databinding.FragmentPeriodBinding
+import com.dagoras.osunolock.sub_manager_lock.fragment.CreateNewItemFragmentManagerDirections
 
 class PeriodFragment : Fragment() {
 
@@ -22,7 +24,21 @@ class PeriodFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-//        setupBinding()
+        setupBinding()
+    }
+
+    private fun setupBinding() {
+        with(binding) {
+            buttonAdd.setOnClickListener {
+                navigateToLoadingRequest()
+            }
+        }
+    }
+
+    private fun navigateToLoadingRequest() {
+        val action =
+            CreateNewItemFragmentManagerDirections.actionCreateNewItemFragmentManagerToLoadingRequestFragment()
+        findNavController().navigate(action)
     }
 
     companion object {

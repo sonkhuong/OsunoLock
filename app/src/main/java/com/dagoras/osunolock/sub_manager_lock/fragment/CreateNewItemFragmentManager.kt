@@ -38,6 +38,7 @@ class CreateNewItemFragmentManager : Fragment() {
                     2 -> tab.text = "Cycle"
                 }
             }.attach()
+
         }
     }
 }

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/low_gray_overlay">
+
+    <TextView
+        android:id="@+id/textLoadingRequest"
+        style="@style/label_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/low_gray_overlay_1"
+        android:drawableTop="@drawable/ic_baseline_warning_24"
+        android:gravity="center"
+        android:paddingHorizontal="@dimen/padding_horizontal_2"
+        android:text="@string/loading_text"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RelativeLayout
+        android:id="@+id/loadingPanel"
+        style="@style/GenericProgressBackground"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_view"
+        app:layout_constraintTop_toBottomOf="@id/textLoadingRequest">
+
+        <ProgressBar style="@style/GenericProgressIndicator" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/buttonCancel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/padding_horizontal_1"
+        android:background="@drawable/bg_button_shape_red"
+        android:fontFamily="@font/compact"
+        android:gravity="center"
+        android:paddingVertical="@dimen/padding_vertical_2"
+        android:text="@string/button_cancel"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintWidth_percent="0.7" />
+</androidx.constraintlayout.widget.ConstraintLayout>

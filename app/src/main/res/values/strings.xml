@@ -1,6 +1,9 @@
 <resources>
     <string name="app_name">OsunoLock</string>
 
+    <!-- Loading request -->
+    <string name="loading_text">Bạn đang thực hiện thêm vân tay vào khóa. Làm ơn để khóa trong vòng 2m, giữ kết nối bluetooth ổn định và thực hiện quét vân tay trên khóa.</string>
+
     <!-- Device scan item -->
     <string name="lock_item_name">HTT-407-S105</string>
 
@@ -8,8 +11,10 @@
     <string name="button_save_1">Lưu giá trị</string>
     <string name="button_save_2">Lưu cài đặt</string>
     <string name="button_add_item">Thêm mới+</string>
+    <string name="button_add">Tạo</string>
     <string name="button_turn_on">Bật</string>
     <string name="button_logout">Đăng xuất</string>
+    <string name="button_cancel">Hủy</string>
     <string name="button_delete_settings">Xóa tất cả cài đặt</string>
 
     <!-- Setting -->

@@ -67,9 +67,6 @@
         <action
             android:id="@+id/action_settingsFragment_to_lockSoundFragment"
             app:destination="@id/lockSoundFragment" />
-        <action
-            android:id="@+id/action_settingsFragment_to_uploadDataFragment"
-            app:destination="@id/uploadDataFragment" />
     </fragment>
     <fragment
         android:id="@+id/remoteUnlockFragment"
@@ -78,7 +75,7 @@
     <fragment
         android:id="@+id/systemSettingFragment"
         android:name="com.dagoras.osunolock.menu.SystemSettingFragment"
-        android:label="SystemSettingFragment" >
+        android:label="SystemSettingFragment">
         <action
             android:id="@+id/action_systemSettingFragment_to_createNewItemFragmentManager"
             app:destination="@id/createNewItemFragmentManager" />
@@ -96,13 +93,9 @@
         android:name="com.dagoras.osunolock.sub_manager_lock.fragment.settings.lock_sound.LockSoundFragment"
         android:label="LockSoundFragment" />
     <fragment
-        android:id="@+id/uploadDataFragment"
-        android:name="com.dagoras.osunolock.sub_manager_lock.fragment.settings.upload_data.UploadDataFragment"
-        android:label="UploadDataFragment" />
-    <fragment
         android:id="@+id/EKeysFragment"
         android:name="com.dagoras.osunolock.sub_manager_lock.fragment.ekeys.EKeysFragment"
-        android:label="EKeysFragment" >
+        android:label="EKeysFragment">
         <action
             android:id="@+id/action_EKeysFragment_to_createNewItemFragmentManager"
             app:destination="@id/createNewItemFragmentManager" />
@@ -110,7 +103,7 @@
     <fragment
         android:id="@+id/recordsFragment"
         android:name="com.dagoras.osunolock.sub_manager_lock.fragment.records.RecordsFragment"
-        android:label="RecordsFragment" >
+        android:label="RecordsFragment">
         <action
             android:id="@+id/action_recordsFragment_to_createNewItemFragmentManager"
             app:destination="@id/createNewItemFragmentManager" />
@@ -118,7 +111,7 @@
     <fragment
         android:id="@+id/adminAuthorizesFragment"
         android:name="com.dagoras.osunolock.sub_manager_lock.fragment.admins.AdminAuthorizesFragment"
-        android:label="AdminAuthorizesFragment" >
+        android:label="AdminAuthorizesFragment">
         <action
             android:id="@+id/action_adminAuthorizesFragment_to_createNewItemFragmentManager"
             app:destination="@id/createNewItemFragmentManager" />
@@ -126,7 +119,7 @@
     <fragment
         android:id="@+id/cardsFragment"
         android:name="com.dagoras.osunolock.sub_manager_lock.fragment.cards.CardsFragment"
-        android:label="CardsFragment" >
+        android:label="CardsFragment">
         <action
             android:id="@+id/action_cardsFragment_to_createNewItemFragmentManager"
             app:destination="@id/createNewItemFragmentManager" />
@@ -134,7 +127,7 @@
     <fragment
         android:id="@+id/fingerPrintsFragment"
         android:name="com.dagoras.osunolock.sub_manager_lock.fragment.fingerprints.FingerPrintsFragment"
-        android:label="FingerPrintsFragment" >
+        android:label="FingerPrintsFragment">
         <action
             android:id="@+id/action_fingerPrintsFragment_to_createNewItemFragmentManager"
             app:destination="@id/createNewItemFragmentManager" />
@@ -142,7 +135,7 @@
     <fragment
         android:id="@+id/passCodesFragment"
         android:name="com.dagoras.osunolock.sub_manager_lock.fragment.passcodes.PassCodesFragment"
-        android:label="PassCodesFragment" >
+        android:label="PassCodesFragment">
         <action
             android:id="@+id/action_passCodesFragment_to_createNewItemFragmentManager"
             app:destination="@id/createNewItemFragmentManager" />
@@ -150,7 +143,7 @@
     <fragment
         android:id="@+id/remotesFragment"
         android:name="com.dagoras.osunolock.sub_manager_lock.fragment.remotes.RemotesFragment"
-        android:label="RemotesFragment" >
+        android:label="RemotesFragment">
         <action
             android:id="@+id/action_remotesFragment_to_createNewItemFragmentManager"
             app:destination="@id/createNewItemFragmentManager" />
@@ -158,11 +151,15 @@
     <fragment
         android:id="@+id/createNewItemFragmentManager"
         android:name="com.dagoras.osunolock.sub_manager_lock.fragment.CreateNewItemFragmentManager"
-        android:label="CreateNewItemFragmentManager" />
+        android:label="CreateNewItemFragmentManager">
+        <action
+            android:id="@+id/action_createNewItemFragmentManager_to_loadingRequestFragment"
+            app:destination="@id/loadingRequestFragment" />
+    </fragment>
     <fragment
         android:id="@+id/listManagerLockFragment"
         android:name="com.dagoras.osunolock.list_manager.fragment.ListManagerLockFragment"
-        android:label="ListManagerLockFragment" >
+        android:label="ListManagerLockFragment">
         <action
             android:id="@+id/action_listManagerLockFragment_to_managerScanLockFragment"
             app:destination="@id/managerScanLockFragment" />
@@ -173,4 +170,8 @@
             android:id="@+id/action_listManagerLockFragment_to_systemSettingFragment2"
             app:destination="@id/systemSettingFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/loadingRequestFragment"
+        android:name="com.dagoras.osunolock.create_new_manager.request_new_item.LoadingRequestFragment"
+        android:label="LoadingRequestFragment" />
 </navigation>
