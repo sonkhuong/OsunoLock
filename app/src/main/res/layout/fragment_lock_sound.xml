@@ -115,11 +115,11 @@
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="@dimen/padding_horizontal"
         android:layout_marginTop="@dimen/padding_horizontal"
-        android:background="@drawable/bg_button_shape_white_shadow_gray"
+        android:background="@drawable/bg_button_shape_blue"
         android:fontFamily="@font/compact"
         android:gravity="center"
         android:padding="@dimen/padding_vertical_2"
         android:text="@string/button_save_2"
-        android:textColor="@color/mid_blue"
+        android:textColor="@color/white"
         app:layout_constraintTop_toBottomOf="@id/linearSelectLockVolume" />
 </androidx.constraintlayout.widget.ConstraintLayout>

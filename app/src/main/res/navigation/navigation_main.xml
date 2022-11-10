@@ -68,14 +68,8 @@
             android:id="@+id/action_settingsFragment_to_lockSoundFragment"
             app:destination="@id/lockSoundFragment" />
         <action
-            android:id="@+id/action_settingsFragment_to_resetButtonFragment"
-            app:destination="@id/resetButtonFragment" />
-        <action
             android:id="@+id/action_settingsFragment_to_uploadDataFragment"
             app:destination="@id/uploadDataFragment" />
-        <action
-            android:id="@+id/action_settingsFragment_to_tamperAlertFragment"
-            app:destination="@id/tamperAlertFragment" />
     </fragment>
     <fragment
         android:id="@+id/remoteUnlockFragment"
@@ -102,17 +96,9 @@
         android:name="com.dagoras.osunolock.sub_manager_lock.fragment.settings.lock_sound.LockSoundFragment"
         android:label="LockSoundFragment" />
     <fragment
-        android:id="@+id/resetButtonFragment"
-        android:name="com.dagoras.osunolock.sub_manager_lock.fragment.settings.reset_button.ResetButtonFragment"
-        android:label="ResetButtonFragment" />
-    <fragment
         android:id="@+id/uploadDataFragment"
         android:name="com.dagoras.osunolock.sub_manager_lock.fragment.settings.upload_data.UploadDataFragment"
         android:label="UploadDataFragment" />
-    <fragment
-        android:id="@+id/tamperAlertFragment"
-        android:name="com.dagoras.osunolock.sub_manager_lock.fragment.settings.tamper_alert.TamperAlertFragment"
-        android:label="TamperAlertFragment" />
     <fragment
         android:id="@+id/EKeysFragment"
         android:name="com.dagoras.osunolock.sub_manager_lock.fragment.ekeys.EKeysFragment"

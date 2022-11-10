@@ -6,10 +6,11 @@
 
     <TextView
         android:id="@+id/textRemoteUnlock"
+        style="@style/label_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="15dp"
-        android:text="@string/remote_unlock_str"
+        android:layout_margin="@dimen/padding_horizontal"
+        android:text="@string/tip_remote"
         android:textColor="@color/black"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -17,24 +18,23 @@
         android:id="@+id/modeRemoteUnlock"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="15dp"
-        android:layout_marginTop="15dp"
-        android:text="Current Mode: Off"
+        android:layout_margin="@dimen/padding_horizontal"
+        android:fontFamily="@font/compact"
+        android:text="@string/mode_remote"
         android:textColor="@color/black"
-        android:textStyle="bold"
         app:layout_constraintTop_toBottomOf="@id/textRemoteUnlock" />
 
     <TextView
         android:id="@+id/buttonRemoteUnlock"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginHorizontal="30dp"
-        android:layout_marginTop="15dp"
-        android:background="@drawable/bg_button_shape_teal"
+        android:layout_marginHorizontal="@dimen/padding_horizontal_2"
+        android:layout_marginTop="@dimen/padding_horizontal"
+        android:background="@drawable/bg_button_shape_blue"
+        android:fontFamily="@font/compact"
         android:gravity="center"
-        android:paddingVertical="10dp"
-        android:text="Turn On"
+        android:paddingVertical="@dimen/padding_vertical_2"
+        android:text="@string/button_turn_on"
         android:textColor="@color/white"
-        android:textStyle="bold"
         app:layout_constraintTop_toBottomOf="@id/modeRemoteUnlock" />
 </androidx.constraintlayout.widget.ConstraintLayout>

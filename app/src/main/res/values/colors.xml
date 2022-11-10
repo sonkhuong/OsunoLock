@@ -9,7 +9,7 @@
     <color name="white">#FFFFFFFF</color>
     <color name="gray">#DA8E8E8E</color>
     <color name="low_gray">#DACFCFCF</color>
-    <color name="low_gray_overlay">#80CFCFCF</color>
+    <color name="low_gray_overlay">#40DCDCDC</color>
     <color name="green">#37FF00</color>
     <color name="blue">#0040FF</color>
     <color name="blue_overlay">#CC3769FF</color>

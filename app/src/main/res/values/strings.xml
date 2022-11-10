@@ -1,10 +1,37 @@
 <resources>
     <string name="app_name">OsunoLock</string>
 
+    <!-- Device scan item -->
+    <string name="lock_item_name">HTT-407-S105</string>
+
     <!-- Another -->
     <string name="button_save_1">Lưu giá trị</string>
     <string name="button_save_2">Lưu cài đặt</string>
     <string name="button_add_item">Thêm mới+</string>
+    <string name="button_turn_on">Bật</string>
+    <string name="button_logout">Đăng xuất</string>
+    <string name="button_delete_settings">Xóa tất cả cài đặt</string>
+
+    <!-- Setting -->
+    <string name="lock_info">Thông tin khóa</string>
+    <string name="remote_unlock_setting">Điều khiển từ xa</string>
+    <string name="lock_clock">Đồng hồ của khóa</string>
+    <string name="import_another_lock">Tải cài đặt khóa từ bên ngoài</string>
+    <string name="privacy_policy">Chính sách bảo mật</string>
+    <string name="another_policy">Chính sách phát triển</string>
+    <string name="warning_label">Cảnh báo khóa</string>
+    <string name="notification_label">Thông báo ứng dụng</string>
+
+    <!-- Setting Navigation -->
+    <string name="sound">Âm thanh ứng dụng</string>
+    <string name="touch_to_unlock">Chạm để mở khóa trên ứng dụng</string>
+    <string name="user_info_label">Quyền hạn người dùng</string>
+    <string name="lock_group_label">Nhóm khóa</string>
+    <string name="transfer_lock">Nhường khóa</string>
+    <string name="languages_label">Ngôn ngữ</string>
+    <string name="screen_lock_label">Chụp màn hình khóa</string>
+    <string name="service_label">Dịch vụ người dùng</string>
+    <string name="about_app_label">Thông tin ứng dụng</string>
 
     <!-- Login/Sign up -->
     <string name="phone_number_title">SĐT</string>
@@ -33,9 +60,12 @@
     <string name="gate_key_label">Khóa cổng</string>
     <string name="scroll_key_label">Khóa cửa cuốn</string>
     <string name="timer_key_label">Đồng hồ đếm ngược</string>
+    <string name="paired_devices">Thiết bị đã ghép nối</string>
+    <string name="available_devices">Thiết bị khả dụng</string>
 
     <!-- Remote unlock -->
-    <string name="remote_unlock_str">This Feature allows you to Unlock the Smart Lock Remotely via a Gateway. This Feature can ONLY be Turned ON or OFF via Bluetooth.</string>
+    <string name="mode_remote">Chế độ hiện tại: Tắt</string>
+    <string name="tip_remote">Tính năng này cho phép bạn bật tắt chế độ điều khiển từ xa, khi tắt, tất cả các chức năng mở cửa từ xa đều bị vô hiệu hóa và ngược lại</string>
 
     <!-- Menu list-->
     <string name="menu_add_lock">Thêm Khóa</string>
@@ -70,7 +100,7 @@
     <string name="volume_very_high">Rất lớn</string>
     <string name="tip_lock_sound">Bằng việt bật tắt âm thanh khóa, bạn có thể nghe hoặc tắt tiếng từ khóa.</string>
 
-    <!-- Settings -->
+    <!-- Manager List -->
     <string name="name_receiver">Tên người nhận</string>
     <string name="address_receiver">Email/SĐT người nhận</string>
     <string name="address_title">Địa chỉ</string>

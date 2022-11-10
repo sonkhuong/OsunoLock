@@ -40,18 +40,6 @@ class SettingsFragment : Fragment() {
                 navigateToLockSound()
             }
 
-            lineTamperAlert.setOnClickListener {
-                navigateToTamperAlert()
-            }
-
-            lineResetButton.setOnClickListener {
-                navigateToResetButton()
-            }
-
-            lineUploadData.setOnClickListener {
-                navigateToUploadData()
-            }
-
             lineRemote.setOnClickListener {
                 navigateToRemoteUnlock()
             }
@@ -68,18 +56,8 @@ class SettingsFragment : Fragment() {
         findNavController().navigate(action)
     }
 
-    private fun navigateToTamperAlert() {
-        val action = SettingsFragmentDirections.actionSettingsFragmentToTamperAlertFragment()
-        findNavController().navigate(action)
-    }
-
     private fun navigateToAutoLock() {
         val action = SettingsFragmentDirections.actionSettingsFragmentToAutoLockFragment()
-        findNavController().navigate(action)
-    }
-
-    private fun navigateToResetButton() {
-        val action = SettingsFragmentDirections.actionSettingsFragmentToResetButtonFragment()
         findNavController().navigate(action)
     }
 
