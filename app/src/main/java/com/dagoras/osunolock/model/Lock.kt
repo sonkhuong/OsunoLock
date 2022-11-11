@@ -18,8 +18,6 @@ data class Lock(
     val macAddress: String?,
     @ColumnInfo(name = "battery_lock")
     val batteryLock: Int,
-    @ColumnInfo(name = "paired_lock")
-    val pairedLock: Boolean,
 ) : Parcelable {
     constructor(parcel: Parcel) : this(
         parcel.readInt(),
@@ -27,7 +25,6 @@ data class Lock(
         parcel.readString(),
         parcel.readString(),
         parcel.readInt(),
-        parcel.readByte() != 0.toByte()
     ) {
     }
 
@@ -37,7 +34,6 @@ data class Lock(
         parcel.writeString(lockName)
         parcel.writeString(macAddress)
         parcel.writeInt(batteryLock)
-        parcel.writeByte(if (pairedLock) 1 else 0)
     }
 
     override fun describeContents(): Int {

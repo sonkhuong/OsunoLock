@@ -7,53 +7,49 @@ import androidx.room.Entity
 import androidx.room.PrimaryKey
 
 @Entity
-data class LockManager(
+data class Record(
     @PrimaryKey(autoGenerate = false)
     val id: Int,
     @ColumnInfo(name = "id_lock")
     val idLock: Int,
-    @ColumnInfo(name = "id_user_root")
-    val idUserRoot: Int,
     @ColumnInfo(name = "id_user")
     val idUser: Int,
-    @ColumnInfo(name = "type_manager") //Type = 1 -> Admin (Share admin), type = 2 -> User (EKey)
-    val typeManager: Int?,
-    @ColumnInfo(name = "start_date")
-    val startDate: String?,
-    @ColumnInfo(name = "end_date") //If end date = null -> permanent
-    val endDate: String?,
+    @ColumnInfo(name = "type_unlock") //Type = 0 -> Passcode, type = 1 -> Card, type = 2 -> FingerPrints, type = 3 -> Remote
+    val typeUnlock: Int,
+    @ColumnInfo(name = "unlock_name")
+    val unlockName: String?,
+    @ColumnInfo(name = "time_unlock")
+    val unlockTime: String?,
 ) : Parcelable {
     constructor(parcel: Parcel) : this(
         parcel.readInt(),
         parcel.readInt(),
         parcel.readInt(),
         parcel.readInt(),
-        parcel.readValue(Int::class.java.classLoader) as? Int,
         parcel.readString(),
-        parcel.readString(),
+        parcel.readString()
     ) {
     }
 
     override fun writeToParcel(parcel: Parcel, flags: Int) {
         parcel.writeInt(id)
         parcel.writeInt(idLock)
-        parcel.writeInt(idUserRoot)
         parcel.writeInt(idUser)
-        parcel.writeValue(typeManager)
-        parcel.writeString(startDate)
-        parcel.writeString(endDate)
+        parcel.writeInt(typeUnlock)
+        parcel.writeString(unlockName)
+        parcel.writeString(unlockTime)
     }
 
     override fun describeContents(): Int {
         return 0
     }
 
-    companion object CREATOR : Parcelable.Creator<LockManager> {
-        override fun createFromParcel(parcel: Parcel): LockManager {
-            return LockManager(parcel)
+    companion object CREATOR : Parcelable.Creator<Record> {
+        override fun createFromParcel(parcel: Parcel): Record {
+            return Record(parcel)
         }
 
-        override fun newArray(size: Int): Array<LockManager?> {
+        override fun newArray(size: Int): Array<Record?> {
             return arrayOfNulls(size)
         }
     }
