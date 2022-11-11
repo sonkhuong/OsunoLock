@@ -10,7 +10,11 @@ import androidx.room.PrimaryKey
 data class Unlock(
     @PrimaryKey(autoGenerate = false)
     val id: Int,
-    @ColumnInfo(name = "type_unlock") //Type = 0 -> Passcode, type = 1 -> Card, type = 2 -> FingerPrints, type = 3 -> Remote, type = 4 -> Record
+    @ColumnInfo(name = "id_lock")
+    val idLock: Int,
+    @ColumnInfo(name = "id_user")
+    val idUser: Int,
+    @ColumnInfo(name = "type_unlock") //Type = 0 -> Passcode, type = 1 -> Card, type = 2 -> FingerPrints, type = 3 -> Remote
     val typeUnlock: Int,
     @ColumnInfo(name = "unlock_name")
     val unlockName: String?,
@@ -26,6 +30,8 @@ data class Unlock(
     constructor(parcel: Parcel) : this(
         parcel.readInt(),
         parcel.readInt(),
+        parcel.readInt(),
+        parcel.readInt(),
         parcel.readString(),
         parcel.readString(),
         parcel.readString(),
@@ -36,6 +42,8 @@ data class Unlock(
 
     override fun writeToParcel(parcel: Parcel, flags: Int) {
         parcel.writeInt(id)
+        parcel.writeInt(idLock)
+        parcel.writeInt(idUser)
         parcel.writeInt(typeUnlock)
         parcel.writeString(unlockName)
         parcel.writeString(startDate)

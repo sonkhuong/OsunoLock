@@ -13,7 +13,6 @@ import com.google.android.material.tabs.TabLayoutMediator
 
 class CreateNewItemFragmentManager : Fragment() {
 
-    private val args: CreateNewItemFragmentManagerArgs by navArgs()
     private lateinit var binding: FragmentCreateNewItemManagerBinding
 
     override fun onCreateView(
@@ -31,8 +30,6 @@ class CreateNewItemFragmentManager : Fragment() {
     }
 
     private fun setupBinding() {
-        Log.d("ARGS", "${args.type}")
-
         with(binding) {
             viewPagerCreateItemManager.adapter =
                 CreateNewItemAdapter(this@CreateNewItemFragmentManager)

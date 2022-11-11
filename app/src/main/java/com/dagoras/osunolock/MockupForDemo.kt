@@ -19,11 +19,11 @@ object MockupForDemo {
     )
 
     val listUnlock = arrayListOf(
-        Unlock(0, 0, "Son1", "11-11-2022", "11-13-2022", null, null),
-        Unlock(1, 1, "Son2", null, null, 20, null),
-        Unlock(2, 2, "Son3", "11-10-2022", null, null, "234"),
-        Unlock(3, 3, "Son4", "11-10-2022", "11-12-2022", null, "23456"),
-        Unlock(4, 4, "Son5", "11-10-2022", "10-13-2022", 10, null),
+        Unlock(0, 1, 2, 0, "Son1", "11-11-2022", "11-13-2022", null, null),
+        Unlock(1, 0, 1, 1, "Son2", null, null, 20, null),
+        Unlock(2, 1, 1, 2, "Son3", "11-10-2022", null, null, "234"),
+        Unlock(3, 2, 2, 3, "Son4", "11-10-2022", "11-12-2022", null, "23456"),
+        Unlock(4, 2, 0, 4, "Son5", "11-10-2022", "10-13-2022", 10, null),
     )
 
     val listLockManager = arrayListOf(

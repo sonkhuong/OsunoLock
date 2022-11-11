@@ -30,12 +30,12 @@ class LockManagerAdapter(private val fragment: Fragment, private val list: Array
         RecyclerView.ViewHolder(binding.root) {
         fun bind(item: LockManager) {
             with(binding) {
-                val lock = getLockById(item.id_lock)
+                val lock = getLockById(item.idLock)
                 itemTitle.text = lock?.lockName
                 itemRule.text = when (item.typeManager) {
-                    1 -> "Admin"
-                    2 -> "User"
-                    else -> "Root Admin"
+                    1 -> "Đồng sở hữu"
+                    2 -> "Người dùng"
+                    else -> "Chủ sở hữu"
                 }
                 itemStatus.text =
                     if (item.startDate!! < CurrentTime.date && item.endDate!! > CurrentTime.date) "Activated" else "Out of date"

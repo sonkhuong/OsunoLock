@@ -11,7 +11,7 @@ data class LockManager(
     @PrimaryKey(autoGenerate = false)
     val id: Int,
     @ColumnInfo(name = "id_lock")
-    val id_lock: Int,
+    val idLock: Int,
     @ColumnInfo(name = "id_user_root")
     val idUserRoot: Int,
     @ColumnInfo(name = "id_user")
@@ -42,7 +42,7 @@ data class LockManager(
 
     override fun writeToParcel(parcel: Parcel, flags: Int) {
         parcel.writeInt(id)
-        parcel.writeInt(id_lock)
+        parcel.writeInt(idLock)
         parcel.writeInt(idUserRoot)
         parcel.writeInt(idUser)
         parcel.writeValue(typeManager)

@@ -4,8 +4,8 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
-import androidx.navigation.fragment.findNavController
 import com.dagoras.osunolock.databinding.FragmentManagerListBinding
 
 class RecordsFragment : Fragment() {
@@ -28,14 +28,7 @@ class RecordsFragment : Fragment() {
 
     private fun setupBinding() {
         with(binding) {
-            buttonAddItem.setOnClickListener {
-                navigateToCreateItemManager()
-            }
+            buttonAddItem.isVisible = false
         }
-    }
-
-    private fun navigateToCreateItemManager() {
-        val action = RecordsFragmentDirections.actionRecordsFragmentToCreateNewItemFragmentManager(4)
-        findNavController().navigate(action)
     }
 }
