@@ -80,7 +80,7 @@
         android:label="RemoteUnlockFragment" />
     <fragment
         android:id="@+id/systemSettingFragment"
-        android:name="com.dagoras.osunolock.menu.SystemSettingFragment"
+        android:name="com.dagoras.osunolock.menu.fragment.SystemSettingFragment"
         android:label="SystemSettingFragment">
         <action
             android:id="@+id/action_systemSettingFragment_to_createNewItemFragmentManager"

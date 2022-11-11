@@ -131,7 +131,7 @@
         android:background="@color/gray"
         android:fontFamily="@font/compact"
         android:gravity="center"
-        android:text="Chức năng chưa phát triển"
+        android:text="Lựa chọn không khả dụng với tính năng này"
         android:textColor="@color/white"
         android:textSize="@dimen/text_size_medium"
         android:visibility="gone" />

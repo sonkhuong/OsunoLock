@@ -31,15 +31,6 @@ class LoginFragment : Fragment() {
         setupBinding()
     }
 
-//    private fun checkCreateAccount(i: Int) {
-//        Log.d("CreateACC", "Created!")
-//        viewModel.createNewUser(User(i, "0912", "123"))
-//    }
-//
-//    private fun checkListAccount() {
-//        Log.d("SizeACC", "${viewModel.getUserById(1).password}")
-//    }
-
     private fun setupBinding() {
         with(binding) {
             layoutLogin.visibility = View.VISIBLE

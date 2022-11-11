@@ -1,36 +1,30 @@
 package com.dagoras.osunolock.adapter
 
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.dagoras.osunolock.R
+import com.dagoras.osunolock.databinding.ItemDeviceScanBinding
 import com.dagoras.osunolock.model.DeviceInfo
 
-class DeviceScanAdapter(private val dataSet: List<DeviceInfo>) :
+class DeviceScanAdapter(private val list: MutableList<DeviceInfo>) :
     RecyclerView.Adapter<DeviceScanAdapter.ViewHolder>() {
 
-    class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
-        val textView: TextView
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
+        val inflater = LayoutInflater.from(parent.context)
+        val binding = ItemDeviceScanBinding.inflate(inflater, parent, false)
+        return ViewHolder(binding)
+    }
 
-        init {
-            textView = view.findViewById(R.id.itemLockName)
+    override fun getItemCount(): Int = list.size
+
+    override fun onBindViewHolder(holder: ViewHolder, position: Int) = holder.bind(list[position])
+
+    inner class ViewHolder(private val binding: ItemDeviceScanBinding) :
+        RecyclerView.ViewHolder(binding.root) {
+        fun bind(item: DeviceInfo) {
+            with(binding) {
+                itemLockName.text = item.name
+            }
         }
     }
-
-    override fun onCreateViewHolder(viewGroup: ViewGroup, viewType: Int): ViewHolder {
-        val view = LayoutInflater.from(viewGroup.context)
-            .inflate(R.layout.item_device_scan, viewGroup, false)
-
-        return ViewHolder(view)
-    }
-
-    override fun onBindViewHolder(viewHolder: ViewHolder, position: Int) {
-        viewHolder.textView.text = dataSet[position].name
-        viewHolder.textView.setOnClickListener {
-        }
-    }
-
-    override fun getItemCount() = dataSet.size
 }

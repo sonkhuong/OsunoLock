@@ -126,7 +126,7 @@
         android:background="@color/gray"
         android:fontFamily="@font/compact"
         android:gravity="center"
-        android:text="Chức năng chưa phát triển"
+        android:text="Tính năng không khả dụng ở chế độ hiện tại"
         android:textColor="@color/white"
         android:textSize="@dimen/text_size_medium"
         android:visibility="gone" />

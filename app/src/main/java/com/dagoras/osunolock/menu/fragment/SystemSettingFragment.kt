@@ -1,4 +1,4 @@
-package com.dagoras.osunolock.menu
+package com.dagoras.osunolock.menu.fragment
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -18,5 +18,14 @@ class SystemSettingFragment : Fragment() {
     ): View {
         binding = FragmentSystemSettingBinding.inflate(inflater, container, false)
         return binding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        setupBinding()
+    }
+
+    private fun setupBinding() {
+
     }
 }
