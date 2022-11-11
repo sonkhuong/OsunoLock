@@ -4,22 +4,21 @@ import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
-import com.dagoras.osunolock.model.Account
-import com.dagoras.osunolock.repository.dao.AccountDao
+import com.dagoras.osunolock.model.User
+import com.dagoras.osunolock.repository.dao.UserDao
 
 
-@Database(entities = [Account::class], version = 1, exportSchema = false)
-abstract class AccountDatabase : RoomDatabase() {
+@Database(entities = [User::class], version = 1, exportSchema = true)
+abstract class UserDatabase : RoomDatabase() {
 
-    abstract fun accountDao(): AccountDao
+    abstract fun userDao(): UserDao
 
     companion object {
 
         @Volatile
-        private var INSTANCE: AccountDatabase? = null
+        private var INSTANCE: UserDatabase? = null
 
-        //Return TransactionDatabase instance
-        fun getDatabase(context: Context): AccountDatabase {
+        fun getDatabase(context: Context): UserDatabase {
             val tmpInstance = INSTANCE
             if (tmpInstance != null) {
                 return tmpInstance
@@ -27,8 +26,8 @@ abstract class AccountDatabase : RoomDatabase() {
             synchronized(this) {
                 val instance = Room.databaseBuilder(
                     context.applicationContext,
-                    AccountDatabase::class.java,
-                    "account"
+                    UserDatabase::class.java,
+                    "account_database"
                 ).build()
                 INSTANCE = instance
                 return instance

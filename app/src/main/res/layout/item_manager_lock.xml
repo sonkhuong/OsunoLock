@@ -15,34 +15,46 @@
         android:fontFamily="@font/compact"
         android:text="Testing item"
         android:textColor="@color/black"
+        android:textSize="15sp"
         app:layout_constraintEnd_toStartOf="@id/itemRemove"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/itemStatus"
-        android:layout_width="wrap_content"
+        android:id="@+id/itemRule"
+        style="@style/edit_text"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/padding_horizontal"
         android:layout_marginTop="@dimen/margin_view"
-        android:layout_marginBottom="@dimen/padding_vertical_2"
+        android:fontFamily="@font/pro_italic"
+        android:text="Root admin"
+        app:layout_constraintEnd_toStartOf="@id/itemRemove"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/itemTitle" />
+
+    <TextView
+        android:id="@+id/itemStatus"
+        style="@style/label_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/padding_horizontal"
         android:background="@color/red"
         android:fontFamily="@font/pro"
         android:paddingHorizontal="@dimen/margin_view"
         android:text="Out of date"
         android:textColor="@color/white"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/itemTitle" />
+        app:layout_constraintTop_toBottomOf="@id/itemRule" />
 
     <TextView
         android:id="@+id/itemContent"
+        style="@style/label_text"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/padding_horizontal"
-        android:layout_marginTop="@dimen/margin_view"
-        android:layout_marginBottom="@dimen/padding_vertical_2"
-        android:fontFamily="@font/pro"
         android:text="2022-05-11 to 2202-06-11"
+        android:textColor="@color/mid_blue"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@id/itemRemove"
         app:layout_constraintStart_toStartOf="parent"
@@ -51,7 +63,7 @@
     <ImageButton
         android:id="@+id/itemRemove"
         android:layout_width="0dp"
-        android:layout_height="100dp"
+        android:layout_height="0dp"
         android:background="@color/white"
         android:padding="@dimen/padding_vertical_1"
         android:src="@drawable/ic_baseline_delete_forever_24"

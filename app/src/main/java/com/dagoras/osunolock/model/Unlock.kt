@@ -5,17 +5,13 @@ import androidx.room.Entity
 import androidx.room.PrimaryKey
 
 @Entity
-data class LockManager(
+data class Unlock(
     @PrimaryKey(autoGenerate = false)
     val id: Int,
-    @ColumnInfo(name = "id_lock")
-    val id_lock: Int,
-    @ColumnInfo(name = "id_user_root")
-    val idUserRoot: Int,
-    @ColumnInfo(name = "id_user")
-    val idUser: Int,
-    @ColumnInfo(name = "type_manager") //Type = 1 -> Admin (Share admin), type = 2 -> User (EKey)
-    val typeManager: Int?,
+    @ColumnInfo(name = "type_unlock") //Type = 0 -> Passcode, type = 1 -> Card, type = 2 -> FingerPrints, type = 3 -> Remote, type = 4 -> Record
+    val typeUnlock: Int,
+    @ColumnInfo(name = "unlock_name")
+    val unlockName: String,
     @ColumnInfo(name = "start_date")
     val startDate: String?,
     @ColumnInfo(name = "end_date") //If end date = null -> permanent

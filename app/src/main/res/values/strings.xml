@@ -81,6 +81,9 @@
     <string name="nav_open">Mở</string>
     <string name="nav_close">Đóng</string>
 
+    <!-- String format -->
+    <string name="date">%s ** to ** %s</string>
+
     <!-- Lock info -->
     <string name="lock_number_title">Mã của khóa</string>
     <string name="lock_number_value">S31_ef8a97</string>

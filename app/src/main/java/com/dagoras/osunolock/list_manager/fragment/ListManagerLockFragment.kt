@@ -5,7 +5,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.dagoras.osunolock.MockupForDemo
 import com.dagoras.osunolock.adapter.LockManagerAdapter
@@ -31,18 +30,12 @@ class ListManagerLockFragment : Fragment() {
     }
 
     private fun setupBinding() {
-        val listLock = MockupForDemo.listMyLock
+        val listLock = MockupForDemo.listLockManager
         adapter = LockManagerAdapter(this, listLock)
         with(binding) {
             recyclerMyLock.layoutManager =
                 LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
             recyclerMyLock.adapter = adapter
         }
-    }
-
-    private fun navigateToScanLock() {
-        val action =
-            ListManagerLockFragmentDirections.actionListManagerLockFragmentToManagerScanLockFragment()
-        findNavController().navigate(action)
     }
 }
