@@ -156,11 +156,11 @@ class ScanLockWithBLTFragment : Fragment() {
             }
         }
 
-    private fun navigateToManagerLock() {
-        val action =
-            ScanLockWithBLTFragmentDirections.actionFragmentScanLockWithBLTToManagerLockFragment()
-        findNavController().navigate(action)
-    }
+//    private fun navigateToManagerLock() {
+//        val action =
+//            ScanLockWithBLTFragmentDirections.actionFragmentScanLockWithBLTToManagerLockFragment()
+//        findNavController().navigate(action)
+//    }
 
     @SuppressLint("MissingPermission")
     private var requestBluetooth =

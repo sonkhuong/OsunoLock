@@ -30,7 +30,8 @@ class LockManagerAdapter(private val fragment: Fragment, private val list: Array
         RecyclerView.ViewHolder(binding.root) {
         fun bind(item: LockManager) {
             with(binding) {
-                itemTitle.text = getLockById(item.id_lock)?.lockName
+                val lock = getLockById(item.id_lock)
+                itemTitle.text = lock?.lockName
                 itemRule.text = when (item.typeManager) {
                     1 -> "Admin"
                     2 -> "User"
@@ -45,7 +46,7 @@ class LockManagerAdapter(private val fragment: Fragment, private val list: Array
                 )
 
                 itemView.setOnClickListener {
-                    navigateToManagerLock(fragment)
+                    navigateToManagerLock(fragment, lock!!, item)
                 }
 
                 itemRemove.setOnClickListener {
@@ -65,9 +66,12 @@ class LockManagerAdapter(private val fragment: Fragment, private val list: Array
         return null
     }
 
-    private fun navigateToManagerLock(fragment: Fragment) {
+    private fun navigateToManagerLock(fragment: Fragment, lock: Lock, lockManager: LockManager) {
         val action =
-            ListManagerLockFragmentDirections.actionListManagerLockFragmentToManagerLockFragment()
+            ListManagerLockFragmentDirections.actionListManagerLockFragmentToManagerLockFragment(
+                lock,
+                lockManager
+            )
         fragment.findNavController().navigate(action)
     }
 }

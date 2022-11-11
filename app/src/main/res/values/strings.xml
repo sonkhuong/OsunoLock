@@ -4,6 +4,9 @@
     <!-- Loading request -->
     <string name="loading_text">Bạn đang thực hiện thêm vân tay vào khóa. Làm ơn để khóa trong vòng 2m, giữ kết nối bluetooth ổn định và thực hiện quét vân tay trên khóa.</string>
 
+    <!-- Dialog -->
+    <string name="dialog">Quá trình tạo % mới hoàn tất. Từ bây giờ bạn có thể sử dụng % này để mở khóa.</string>
+
     <!-- Device scan item -->
     <string name="lock_item_name">HTT-407-S105</string>
 
@@ -55,7 +58,7 @@
     <string name="remote_label">Điều khiển</string>
     <string name="ekeys_label">EKeys</string>
     <string name="passcode_label">Mật khẩu</string>
-    <string name="admin_label">Quyền quản lý</string>
+    <string name="admin_label">Share quyền</string>
     <string name="record_label">Lịch sử</string>
     <string name="finger_label">Vân tay</string>
     <string name="setting_label">Cài đặt</string>

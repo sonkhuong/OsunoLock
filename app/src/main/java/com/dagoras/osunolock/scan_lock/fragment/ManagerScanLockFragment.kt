@@ -10,6 +10,7 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.dagoras.osunolock.R
 import com.dagoras.osunolock.databinding.FragmentManagerScanLockBinding
+import com.dagoras.osunolock.manager_lock.fragment.ManagerLockFragmentArgs
 
 class ManagerScanLockFragment : Fragment() {
 

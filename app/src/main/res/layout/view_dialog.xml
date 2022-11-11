@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_white_shape">
+
+    <TextView
+        android:id="@+id/dialogContent"
+        style="@style/label_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableTop="@drawable/ic_baseline_check_circle_24"
+        android:gravity="center"
+        android:paddingHorizontal="@dimen/padding_horizontal_2"
+        android:paddingTop="@dimen/padding_vertical_2"
+        android:text="@string/dialog"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/buttonConfirm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="@dimen/padding_vertical_2"
+        android:background="@drawable/bg_button_shape_red"
+        android:fontFamily="@font/compact"
+        android:gravity="center"
+        android:paddingHorizontal="@dimen/padding_horizontal_2"
+        android:paddingVertical="@dimen/padding_vertical_2"
+        android:text="OK"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/dialogContent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

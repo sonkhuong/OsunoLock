@@ -50,6 +50,12 @@
         <action
             android:id="@+id/action_managerLockFragment_to_remotesFragment"
             app:destination="@id/remotesFragment" />
+        <argument
+            android:name="lock"
+            app:argType="com.dagoras.osunolock.model.Lock" />
+        <argument
+            android:name="lockManager"
+            app:argType="com.dagoras.osunolock.model.LockManager" />
     </fragment>
     <fragment
         android:id="@+id/settingsFragment"
