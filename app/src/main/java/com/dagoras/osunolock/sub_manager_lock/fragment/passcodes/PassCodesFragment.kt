@@ -37,7 +37,7 @@ class PassCodesFragment : Fragment() {
 
     private fun navigateToCreateItemManager() {
         val action =
-            PassCodesFragmentDirections.actionPassCodesFragmentToCreateNewItemFragmentManager()
+            PassCodesFragmentDirections.actionPassCodesFragmentToCreateNewItemFragmentManager(0)
         findNavController().navigate(action)
     }
 }

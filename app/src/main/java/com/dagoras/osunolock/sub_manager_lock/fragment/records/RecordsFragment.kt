@@ -35,7 +35,7 @@ class RecordsFragment : Fragment() {
     }
 
     private fun navigateToCreateItemManager() {
-        val action = RecordsFragmentDirections.actionRecordsFragmentToCreateNewItemFragmentManager()
+        val action = RecordsFragmentDirections.actionRecordsFragmentToCreateNewItemFragmentManager(4)
         findNavController().navigate(action)
     }
 }

@@ -35,7 +35,7 @@ class EKeysFragment : Fragment() {
     }
 
     private fun navigateToCreateItemManager() {
-        val action = EKeysFragmentDirections.actionEKeysFragmentToCreateNewItemFragmentManager()
+        val action = EKeysFragmentDirections.actionEKeysFragmentToCreateNewItemFragmentManager(-1)
         findNavController().navigate(action)
     }
 }

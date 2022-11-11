@@ -37,7 +37,7 @@ class FingerPrintsFragment : Fragment() {
 
     private fun navigateToCreateItemManager() {
         val action =
-            FingerPrintsFragmentDirections.actionFingerPrintsFragmentToCreateNewItemFragmentManager()
+            FingerPrintsFragmentDirections.actionFingerPrintsFragmentToCreateNewItemFragmentManager(2)
         findNavController().navigate(action)
     }
 }

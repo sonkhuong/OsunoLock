@@ -36,7 +36,10 @@ class AdminAuthorizesFragment : Fragment() {
     }
 
     private fun navigateToCreateItemManager() {
-        val action = AdminAuthorizesFragmentDirections.actionAdminAuthorizesFragmentToCreateNewItemFragmentManager()
+        val action =
+            AdminAuthorizesFragmentDirections.actionAdminAuthorizesFragmentToCreateNewItemFragmentManager(
+                -2
+            )
         findNavController().navigate(action)
     }
 }

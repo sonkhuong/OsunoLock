@@ -161,6 +161,9 @@
         <action
             android:id="@+id/action_createNewItemFragmentManager_to_loadingRequestFragment"
             app:destination="@id/loadingRequestFragment" />
+        <argument
+            android:name="type"
+            app:argType="integer" />
     </fragment>
     <fragment
         android:id="@+id/listManagerLockFragment"
@@ -179,5 +182,16 @@
     <fragment
         android:id="@+id/loadingRequestFragment"
         android:name="com.dagoras.osunolock.create_new_manager.request_new_item.LoadingRequestFragment"
-        android:label="LoadingRequestFragment" />
+        android:label="LoadingRequestFragment">
+        <argument
+            android:name="unlock"
+            android:defaultValue="@null"
+            app:argType="com.dagoras.osunolock.model.Unlock"
+            app:nullable="true" />
+        <argument
+            android:name="lockManager"
+            android:defaultValue="@null"
+            app:argType="com.dagoras.osunolock.model.LockManager"
+            app:nullable="true" />
+    </fragment>
 </navigation>

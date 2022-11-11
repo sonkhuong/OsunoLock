@@ -35,7 +35,7 @@ class RemotesFragment : Fragment() {
     }
 
     private fun navigateToCreateItemManager() {
-        val action = RemotesFragmentDirections.actionRemotesFragmentToCreateNewItemFragmentManager()
+        val action = RemotesFragmentDirections.actionRemotesFragmentToCreateNewItemFragmentManager(3)
         findNavController().navigate(action)
     }
 }

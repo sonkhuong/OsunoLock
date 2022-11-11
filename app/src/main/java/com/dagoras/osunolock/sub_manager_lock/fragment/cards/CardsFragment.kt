@@ -36,7 +36,7 @@ class CardsFragment : Fragment() {
     }
 
     private fun navigateToCreateItemManager() {
-        val action = CardsFragmentDirections.actionCardsFragmentToCreateNewItemFragmentManager()
+        val action = CardsFragmentDirections.actionCardsFragmentToCreateNewItemFragmentManager(1)
         findNavController().navigate(action)
     }
 }
