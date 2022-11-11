@@ -6,11 +6,16 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
+import androidx.navigation.fragment.navArgs
 import com.dagoras.osunolock.databinding.FragmentPeriodBinding
+import com.dagoras.osunolock.model.LockManager
+import com.dagoras.osunolock.model.Unlock
+import com.dagoras.osunolock.sub_manager_lock.fragment.CreateNewItemFragmentManagerArgs
 import com.dagoras.osunolock.sub_manager_lock.fragment.CreateNewItemFragmentManagerDirections
 
 class PeriodFragment : Fragment() {
 
+    private val args: CreateNewItemFragmentManagerArgs by navArgs()
     private lateinit var binding: FragmentPeriodBinding
 
     override fun onCreateView(
@@ -28,17 +33,55 @@ class PeriodFragment : Fragment() {
     }
 
     private fun setupBinding() {
+        val idPoint = args.type
         with(binding) {
             buttonAdd.setOnClickListener {
-                navigateToLoadingRequest()
+                createNewItem(idPoint)
             }
         }
     }
 
-    private fun navigateToLoadingRequest() {
+    private fun navigateToLoadingRequest(unlock: Unlock?, lockManager: LockManager?) {
         val action =
-            CreateNewItemFragmentManagerDirections.actionCreateNewItemFragmentManagerToLoadingRequestFragment()
+            CreateNewItemFragmentManagerDirections.actionCreateNewItemFragmentManagerToLoadingRequestFragment(
+                unlock,
+                lockManager
+            )
         findNavController().navigate(action)
+    }
+
+    private fun createNewItem(idPoint: Int) {
+        when (idPoint) {
+            //If choose Passcode, Card... -> Create new Unlock Item
+            0, 1, 2, 3, 4 -> {
+                val unlock =
+                    Unlock(
+                        0,
+                        idPoint,
+                        binding.editName.text.toString(),
+                        binding.dateStartDate.text.toString(),
+                        binding.dateEndDate.text.toString(),
+                        null,
+                        null
+                    )
+                navigateToLoadingRequest(unlock, null)
+            }
+            //If choose EKey or Admin -> Create new LockManager Item
+            -1, -2 -> {
+                val lockManager = LockManager(
+                    0,
+                    0,
+                    0,
+                    0,
+                    idPoint + 3,
+                    binding.dateStartDate.text.toString(),
+                    binding.dateEndDate.text.toString(),
+                    null,
+                    null
+                )
+                navigateToLoadingRequest(null, lockManager)
+            }
+        }
     }
 
     companion object {

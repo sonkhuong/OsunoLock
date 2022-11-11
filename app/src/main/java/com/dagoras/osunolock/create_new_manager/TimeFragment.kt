@@ -7,23 +7,23 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
-import com.dagoras.osunolock.databinding.FragmentCycleBinding
+import com.dagoras.osunolock.databinding.FragmentTimeBinding
 import com.dagoras.osunolock.model.LockManager
 import com.dagoras.osunolock.model.Unlock
 import com.dagoras.osunolock.sub_manager_lock.fragment.CreateNewItemFragmentManagerArgs
 import com.dagoras.osunolock.sub_manager_lock.fragment.CreateNewItemFragmentManagerDirections
 
-class CycleFragment : Fragment() {
+class TimeFragment : Fragment() {
 
     private val args: CreateNewItemFragmentManagerArgs by navArgs()
-    private lateinit var binding: FragmentCycleBinding
+    private lateinit var binding: FragmentTimeBinding
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        binding = FragmentCycleBinding.inflate(inflater, container, false)
+        binding = FragmentTimeBinding.inflate(inflater, container, false)
         return binding.root
     }
 
@@ -34,10 +34,9 @@ class CycleFragment : Fragment() {
 
     private fun setupBinding() {
         val idPoint = args.type
-
         with(binding) {
             if (idPoint == -1 || idPoint == -2) {
-                layoutCycle.isEnabled = false
+                layoutTime.isEnabled = false
             }
 
             buttonAdd.setOnClickListener {
@@ -60,13 +59,22 @@ class CycleFragment : Fragment() {
             //If choose Passcode, Card... -> Create new Unlock Item
             0, 1, 2, 3, 4 -> {
                 val unlock =
-                    Unlock(0, idPoint, binding.editName.text.toString(), null, null, null, "234")
+                    Unlock(
+                        0,
+                        idPoint,
+                        binding.editName.text.toString(),
+                        null,
+                        null,
+                        binding.editCountingTimes.text.toString().toInt(),
+                        null
+                    )
                 navigateToLoadingRequest(unlock, null)
             }
         }
     }
 
     companion object {
-        fun newInstance() = CycleFragment()
+        fun newInstance() = TimeFragment()
     }
+
 }
