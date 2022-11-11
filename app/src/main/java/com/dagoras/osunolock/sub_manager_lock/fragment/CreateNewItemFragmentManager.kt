@@ -1,6 +1,7 @@
 package com.dagoras.osunolock.sub_manager_lock.fragment
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -12,6 +13,7 @@ import com.google.android.material.tabs.TabLayoutMediator
 
 class CreateNewItemFragmentManager : Fragment() {
 
+    private val args: CreateNewItemFragmentManagerArgs by navArgs()
     private lateinit var binding: FragmentCreateNewItemManagerBinding
 
     override fun onCreateView(
@@ -29,13 +31,15 @@ class CreateNewItemFragmentManager : Fragment() {
     }
 
     private fun setupBinding() {
+        Log.d("ARGS", "${args.type}")
+
         with(binding) {
             viewPagerCreateItemManager.adapter =
                 CreateNewItemAdapter(this@CreateNewItemFragmentManager)
             TabLayoutMediator(tabCreateItemManager, viewPagerCreateItemManager) { tab, position ->
                 when (position) {
-                    0 -> tab.text = "Times"
-                    1 -> tab.text = "Period"
+                    0 -> tab.text = "Period"
+                    1 -> tab.text = "Time"
                     2 -> tab.text = "Cycle"
                 }
             }.attach()

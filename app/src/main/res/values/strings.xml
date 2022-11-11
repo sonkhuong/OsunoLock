@@ -112,7 +112,7 @@
 
     <!-- Manager List -->
     <string name="name_receiver">Tên người nhận</string>
-    <string name="address_receiver">Email/SĐT người nhận</string>
+    <string name="address_receiver">SĐT người nhận</string>
     <string name="address_title">Địa chỉ</string>
     <string name="days_of_weeks">Lặp lại các ngày trong tuần</string>
     <string name="name_title">Tên</string>

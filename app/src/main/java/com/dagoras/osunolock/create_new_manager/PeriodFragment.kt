@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
@@ -33,8 +34,13 @@ class PeriodFragment : Fragment() {
     }
 
     private fun setupBinding() {
-        val idPoint = args.type
+        val idPoint = 0
+
         with(binding) {
+            when (idPoint) {
+                0, 1, 2, 3, 4 -> linearReceiver.isVisible = false
+            }
+
             buttonAdd.setOnClickListener {
                 createNewItem(idPoint)
             }

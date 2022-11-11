@@ -12,8 +12,8 @@ class CreateNewItemAdapter(fragment: Fragment) : FragmentStateAdapter(fragment) 
 
     override fun createFragment(position: Int): Fragment {
         return when (position) {
-            0 -> TimeFragment.newInstance()
-            1 -> PeriodFragment.newInstance()
+            0 -> PeriodFragment.newInstance()
+            1 -> TimeFragment.newInstance()
             else -> CycleFragment.newInstance()
         }
     }

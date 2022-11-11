@@ -15,7 +15,8 @@
             android:id="@+id/linearReceiver"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:visibility="gone">
 
             <TextView
                 android:id="@+id/lineReceiver"
@@ -122,4 +123,16 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintWidth_percent="0.7" />
+
+    <TextView
+        android:id="@+id/layoutDisable"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/gray"
+        android:fontFamily="@font/compact"
+        android:gravity="center"
+        android:text="Chức năng chưa phát triển"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_medium"
+        android:visibility="gone" />
 </androidx.constraintlayout.widget.ConstraintLayout>
